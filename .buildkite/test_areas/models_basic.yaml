@@ -59,8 +59,6 @@ steps:
 - label: Transformers Nightly Models
   key: transformers-nightly-models
   working_dir: "/vllm-workspace/"
-  optional: true
-  soft_fail: true
   commands:
     - pip install --upgrade git+https://github.com/huggingface/transformers
     - pytest -v -s tests/models/test_initialization.py
