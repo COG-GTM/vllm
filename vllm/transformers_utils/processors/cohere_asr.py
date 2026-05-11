@@ -13,6 +13,9 @@ from transformers import AutoFeatureExtractor, AutoProcessor, BatchFeature
 from transformers.feature_extraction_sequence_utils import (
     SequenceFeatureExtractor,
 )
+from transformers.models.cohere_asr.configuration_cohere_asr import (
+    CohereAsrConfig,
+)
 from transformers.processing_utils import ProcessorMixin
 
 logger = logging.getLogger(__name__)
@@ -569,5 +572,5 @@ class CohereASRProcessor(ProcessorMixin):
         return result
 
 
-AutoFeatureExtractor.register("CohereASRFeatureExtractor", CohereASRFeatureExtractor)
-AutoProcessor.register("CohereASRProcessor", CohereASRProcessor)
+AutoFeatureExtractor.register(CohereAsrConfig, CohereASRFeatureExtractor, exist_ok=True)
+AutoProcessor.register(CohereAsrConfig, CohereASRProcessor, exist_ok=True)

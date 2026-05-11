@@ -10,6 +10,7 @@ from transformers import (
     AutoFeatureExtractor,
     BatchFeature,
 )
+from transformers.configuration_utils import PretrainedConfig
 from transformers.feature_extraction_sequence_utils import SequenceFeatureExtractor
 from transformers.processing_utils import ProcessorMixin
 from transformers.utils import TensorType
@@ -341,6 +342,12 @@ class FireRedASR2Processor(ProcessorMixin):
         return self.tokenizer.get_prompt_ids(text, return_tensors=return_tensors)
 
 
+class _FireRedASR2FeatureExtractorConfig(PretrainedConfig):
+    """Sentinel config for AutoFeatureExtractor registration (v5.2+ compat)."""
+
+    model_type = "fireredasr2_fe"
+
+
 AutoFeatureExtractor.register(
-    "FireRedASR2FeatureExtractor", FireRedASR2FeatureExtractor
+    _FireRedASR2FeatureExtractorConfig, FireRedASR2FeatureExtractor
 )
