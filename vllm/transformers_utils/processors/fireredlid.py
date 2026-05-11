@@ -27,6 +27,7 @@ from transformers.processing_utils import ProcessorMixin
 from transformers.utils import TensorType
 
 from vllm.logger import init_logger
+from vllm.transformers_utils.configs.fireredlid import FireRedLIDConfig
 from vllm.utils.import_utils import LazyLoader
 
 if TYPE_CHECKING:
@@ -273,4 +274,4 @@ class FireRedLIDProcessor(ProcessorMixin):
 # Registration
 # ---------------------------------------------------------------------------
 
-AutoFeatureExtractor.register("FireRedLIDFeatureExtractor", FireRedLIDFeatureExtractor)
+AutoFeatureExtractor.register(FireRedLIDConfig, FireRedLIDFeatureExtractor)

@@ -11,6 +11,7 @@ from transformers import (
     AutoFeatureExtractor,
     BatchFeature,
 )
+from transformers.configuration_utils import PretrainedConfig
 from transformers.feature_extraction_sequence_utils import SequenceFeatureExtractor
 from transformers.processing_utils import ProcessorMixin
 from transformers.utils import TensorType
@@ -480,4 +481,10 @@ class FunASRProcessor(ProcessorMixin):
         return self.tokenizer.get_prompt_ids(text, return_tensors=return_tensors)
 
 
-AutoFeatureExtractor.register("FunASRFeatureExtractor", FunASRFeatureExtractor)
+class _FunASRFeatureExtractorConfig(PretrainedConfig):
+    """Sentinel config for AutoFeatureExtractor registration (v5.2+ compat)."""
+
+    model_type = "funasr_fe"
+
+
+AutoFeatureExtractor.register(_FunASRFeatureExtractorConfig, FunASRFeatureExtractor)
