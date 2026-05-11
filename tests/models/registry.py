@@ -509,7 +509,10 @@ _TEXT_GENERATION_EXAMPLE_MODELS = {
         "Qwen/Qwen-7B-Chat",
         max_transformers_version="4.53",
         transformers_version_reason={
-            "hf": "HF model uses remote code that is not compatible with latest Transformers"  # noqa: E501
+            "hf": (
+                "Legacy Qwen-1 remote code incompatible with "
+                "transformers v5; model superseded by Qwen2/Qwen3"
+            )
         },
         trust_remote_code=True,
     ),
@@ -725,14 +728,20 @@ _REWARD_EXAMPLE_MODELS = {
         "Qwen/Qwen2.5-Math-RM-72B",
         max_transformers_version="4.53",
         transformers_version_reason={
-            "hf": "HF model uses remote code that is not compatible with latest Transformers"  # noqa: E501
+            "hf": (
+                "HF remote code uses APIs incompatible with "
+                "transformers v5; upstream repo not updated"
+            )
         },
     ),
     "Qwen2ForProcessRewardModel": _HfExamplesInfo(
         "Qwen/Qwen2.5-Math-PRM-7B",
         max_transformers_version="4.53",
         transformers_version_reason={
-            "hf": "HF model uses remote code that is not compatible with latest Transformers"  # noqa: E501
+            "hf": (
+                "HF remote code uses APIs incompatible with "
+                "transformers v5; upstream repo not updated"
+            )
         },
     ),
 }
@@ -850,7 +859,12 @@ _MULTIMODAL_EXAMPLE_MODELS = {
         "deepseek-ai/deepseek-vl2-tiny",
         extras={"fork": "Isotr0py/deepseek-vl2-tiny"},
         max_transformers_version="4.48",
-        transformers_version_reason={"hf": "HF model is not compatible."},
+        transformers_version_reason={
+            "hf": (
+                "Upstream remote code incompatible with "
+                "transformers v5; HF repo not updated"
+            )
+        },
     ),
     "DeepseekOCRForCausalLM": _HfExamplesInfo(
         "deepseek-ai/DeepSeek-OCR",
@@ -941,7 +955,12 @@ _MULTIMODAL_EXAMPLE_MODELS = {
         trust_remote_code=True,
         extras={"2b": "h2oai/h2ovl-mississippi-2b"},
         max_transformers_version="4.48",
-        transformers_version_reason={"hf": "HF model is not compatible."},
+        transformers_version_reason={
+            "hf": (
+                "Upstream remote code incompatible with "
+                "transformers v5; HF repo not updated"
+            )
+        },
     ),
     "HCXVisionForCausalLM": _HfExamplesInfo(
         "naver-hyperclovax/HyperCLOVAX-SEED-Vision-Instruct-3B",
@@ -1110,7 +1129,12 @@ _MULTIMODAL_EXAMPLE_MODELS = {
         "allenai/Molmo-7B-D-0924",
         max_transformers_version="4.48",
         transformers_version_reason={
-            "vllm": "Incorrectly-detected `tensorflow` import from processor."
+            "vllm": "Incorrectly-detected `tensorflow` import from processor.",
+            "hf": (
+                "Upstream image_preprocessing_molmo.py contains "
+                "tensorflow import in resize path, incompatible "
+                "with transformers v5 import detection"
+            ),
         },
         extras={"olmo": "allenai/Molmo-7B-O-0924"},
         trust_remote_code=True,
@@ -1198,7 +1222,12 @@ _MULTIMODAL_EXAMPLE_MODELS = {
         "AIDC-AI/Ovis2-1B",
         trust_remote_code=True,
         max_transformers_version="4.53",
-        transformers_version_reason={"hf": "HF model is not compatible"},
+        transformers_version_reason={
+            "hf": (
+                "Custom processor code incompatible with "
+                "transformers v5; upstream repo not updated"
+            )
+        },
         extras={
             "1.6-llama": "AIDC-AI/Ovis1.6-Llama3.2-3B",
             "1.6-gemma": "AIDC-AI/Ovis1.6-Gemma2-9B",
@@ -1236,8 +1265,12 @@ _MULTIMODAL_EXAMPLE_MODELS = {
         trust_remote_code=True,
         max_transformers_version="4.48",
         transformers_version_reason={
-            "hf": "HF model use deprecated imports which have been removed."
-        },  # noqa: E501
+            "hf": (
+                "Upstream remote code uses deprecated "
+                "PHI3V_PRETRAINED_CONFIG_ARCHIVE_MAP removed in "
+                "transformers v5; repo unmaintained since 2024"
+            )
+        },
         extras={"phi3.5": "microsoft/Phi-3.5-vision-instruct"},
     ),
     "Phi4ForCausalLMV": _HfExamplesInfo(
