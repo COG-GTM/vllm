@@ -311,9 +311,7 @@ class Base(
 
         This handles:
 
-        - Transformers weight renaming:
-            - from `WeightRenaming` in Transformers v5
-            - from `_checkpoint_conversion_mapping` in Transformers v4
+        - Transformers weight renaming via `WeightRenaming`
         - Checkpoints saved with a base model prefix that is not `model`
         - Checkpoints saved with no base model prefix
         - Any quantization config specific mappings
@@ -321,37 +319,21 @@ class Base(
         self.hf_to_vllm_mapper = WeightsMapper()
         orig_to_new_regex = self.hf_to_vllm_mapper.orig_to_new_regex
 
-        if Version(transformers.__version__) >= Version("5.0.0"):
-            from transformers.conversion_mapping import (
-                WeightRenaming,
-                get_model_conversion_mapping,
-            )
+        from transformers.conversion_mapping import (
+            WeightRenaming,
+            get_model_conversion_mapping,
+        )
 
-            for mapping in get_model_conversion_mapping(self.model):
-                # Handle weights which have been renamed in Transformers
-                if isinstance(mapping, WeightRenaming):
-                    # Recompile using regex (Transformers used re)
-                    compiled_sources = re.compile(
-                        mapping.compiled_sources.pattern, mapping.compiled_sources.flags
-                    )
-                    target_pattern = mapping.target_patterns[0]
-                    orig_to_new_regex[compiled_sources] = target_pattern
-                # TODO: Handle WeightConverter to enable layer merging
-        else:
-            # Replace legacy suffixes used for norms
-            # TODO(hmellor): Remove this when Transformers v4 support is dropped
-            orig_to_new_regex.update(
-                {
-                    re.compile(r"\.gamma$"): ".weight",
-                    re.compile(r"\.beta$"): ".bias",
-                }
-            )
-
-        # Handle weights which have been renamed in Transformers
-        # TODO(hmellor): Remove this when Transformers v4 support is dropped
-        ccm = getattr(self.model, "_checkpoint_conversion_mapping", {})
-        for source, target in ccm.items():
-            orig_to_new_regex[re.compile(source)] = target
+        for mapping in get_model_conversion_mapping(self.model):
+            # Handle weights which have been renamed in Transformers
+            if isinstance(mapping, WeightRenaming):
+                # Recompile using regex (Transformers used re)
+                compiled_sources = re.compile(
+                    mapping.compiled_sources.pattern, mapping.compiled_sources.flags
+                )
+                target_pattern = mapping.target_patterns[0]
+                orig_to_new_regex[compiled_sources] = target_pattern
+            # TODO: Handle WeightConverter to enable layer merging
 
         # Handle unexpected weights which should be ignored
         if self.model._keys_to_ignore_on_load_unexpected is not None:

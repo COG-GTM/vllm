@@ -655,11 +655,10 @@ def safe_apply_chat_template(
         chat_template_kwargs=kwargs,
     )
 
-    # transformers v5 changed the default of `return_dict` to True, which
-    # makes `apply_chat_template(tokenize=True)` return a `BatchEncoding`
+    # transformers v5 defaults `return_dict` to True, which makes
+    # `apply_chat_template(tokenize=True)` return a `BatchEncoding`
     # instead of `list[int]`. Force `return_dict=False` so downstream code
-    # that expects a flat token list (e.g. `parse_dec_only_prompt`) works
-    # consistently across v4 and v5.
+    # that expects a flat token list (e.g. `parse_dec_only_prompt`) works.
     if tokenize and "return_dict" not in resolved_kwargs:
         resolved_kwargs["return_dict"] = False
 
