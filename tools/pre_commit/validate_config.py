@@ -5,6 +5,8 @@ Ensures all fields in a config dataclass have default values
 and that each field has a docstring.
 """
 
+from __future__ import annotations
+
 import ast
 import inspect
 import sys

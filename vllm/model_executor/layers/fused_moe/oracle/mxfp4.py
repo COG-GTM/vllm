@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+from __future__ import annotations
+
 from enum import Enum
-from typing import Union
 
 import torch
 
@@ -602,8 +603,8 @@ def convert_gpt_oss_weight_to_mxfp4_moe_kernel_format(
 ) -> tuple[
     torch.Tensor,
     torch.Tensor,
-    Union[torch.Tensor, "PrecisionConfig"],
-    Union[torch.Tensor, "PrecisionConfig"],
+    torch.Tensor | PrecisionConfig,
+    torch.Tensor | PrecisionConfig,
     torch.Tensor | None,
     torch.Tensor | None,
 ]:
@@ -1071,8 +1072,8 @@ def convert_weight_to_mxfp4_moe_kernel_format(
 ) -> tuple[
     torch.Tensor,
     torch.Tensor,
-    Union[torch.Tensor, "PrecisionConfig"],
-    Union[torch.Tensor, "PrecisionConfig"],
+    torch.Tensor | PrecisionConfig,
+    torch.Tensor | PrecisionConfig,
     torch.Tensor | None,
     torch.Tensor | None,
 ]:
@@ -1368,8 +1369,8 @@ def convert_weight_to_mxfp4_moe_kernel_format(
 
 def make_mxfp4_moe_quant_config(
     mxfp4_backend: Mxfp4MoeBackend,
-    w1_scale: Union[torch.Tensor, "PrecisionConfig"],
-    w2_scale: Union[torch.Tensor, "PrecisionConfig"],
+    w1_scale: torch.Tensor | PrecisionConfig,
+    w2_scale: torch.Tensor | PrecisionConfig,
     gemm1_alpha: float | None = None,
     gemm1_beta: float | None = None,
     swiglu_limit: float | None = None,
