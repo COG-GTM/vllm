@@ -1,5 +1,7 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+from __future__ import annotations
+
 import asyncio
 import contextlib
 import copy
@@ -8,7 +10,7 @@ import logging
 from abc import ABC, abstractmethod
 from contextlib import AsyncExitStack
 from dataclasses import replace
-from typing import TYPE_CHECKING, Any, Final, Union
+from typing import TYPE_CHECKING, Any, Final
 
 from openai.types.responses.response_function_tool_call_output_item import (
     ResponseFunctionToolCallOutputItem,
@@ -93,7 +95,7 @@ class TurnMetrics:
         self.cached_input_tokens = 0
         self.tool_output_tokens = 0
 
-    def copy(self) -> "TurnMetrics":
+    def copy(self) -> TurnMetrics:
         """Create a copy of this turn's token counts."""
         return TurnMetrics(
             self.input_tokens,
@@ -367,7 +369,7 @@ class ParsableContext(ConversationContext):
         return False
 
     async def call_python_tool(
-        self, tool_session: Union["ClientSession", Tool], last_msg: FunctionCall
+        self, tool_session: ClientSession | Tool, last_msg: FunctionCall
     ) -> list[ResponseInputOutputItem]:
         self.called_tools.add("python")
         if isinstance(tool_session, Tool):
@@ -390,7 +392,7 @@ class ParsableContext(ConversationContext):
         return [message]
 
     async def call_search_tool(
-        self, tool_session: Union["ClientSession", Tool], last_msg: FunctionCall
+        self, tool_session: ClientSession | Tool, last_msg: FunctionCall
     ) -> list[ResponseInputOutputItem]:
         self.called_tools.add("browser")
         if isinstance(tool_session, Tool):
@@ -416,7 +418,7 @@ class ParsableContext(ConversationContext):
         return [message]
 
     async def call_container_tool(
-        self, tool_session: Union["ClientSession", Tool], last_msg: Message
+        self, tool_session: ClientSession | Tool, last_msg: Message
     ) -> list[Message]:
         """
         Call container tool. Expect this to be run in a stateful docker
@@ -713,7 +715,7 @@ class HarmonyContext(ConversationContext):
         return render_for_completion(self.messages)
 
     async def call_search_tool(
-        self, tool_session: Union["ClientSession", Tool], last_msg: Message
+        self, tool_session: ClientSession | Tool, last_msg: Message
     ) -> list[Message]:
         self.called_tools.add("browser")
         if isinstance(tool_session, Tool):
@@ -740,7 +742,7 @@ class HarmonyContext(ConversationContext):
         ]
 
     async def call_python_tool(
-        self, tool_session: Union["ClientSession", Tool], last_msg: Message
+        self, tool_session: ClientSession | Tool, last_msg: Message
     ) -> list[Message]:
         self.called_tools.add("python")
         if isinstance(tool_session, Tool):
@@ -784,7 +786,7 @@ class HarmonyContext(ConversationContext):
                     exit_stack.push_async_exit(self.cleanup_session)
 
     async def call_container_tool(
-        self, tool_session: Union["ClientSession", Tool], last_msg: Message
+        self, tool_session: ClientSession | Tool, last_msg: Message
     ) -> list[Message]:
         """
         Call container tool. Expect this to be run in a stateful docker
