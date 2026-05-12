@@ -1,9 +1,12 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+
+from __future__ import annotations
+
 # Standard
 import os
 import threading
-from typing import TYPE_CHECKING, Union
+from typing import TYPE_CHECKING
 
 import torch
 from lmcache.logging import init_logger
@@ -73,7 +76,7 @@ def hex_hash_to_int16(s: str) -> int:
 def apply_mm_hashes_to_token_ids(
     token_ids: torch.Tensor,
     mm_hashes: list[str],
-    mm_positions: list["PlaceholderRange"],
+    mm_positions: list[PlaceholderRange],
 ) -> torch.Tensor:
     """
     Overwrite token_ids in-place for multimodal placeholders using
@@ -89,7 +92,7 @@ def apply_mm_hashes_to_token_ids(
     return token_ids
 
 
-def mla_enabled(model_config: "ModelConfig") -> bool:
+def mla_enabled(model_config: ModelConfig) -> bool:
     return (
         hasattr(model_config, "use_mla")
         and isinstance(model_config.use_mla, bool)
@@ -167,8 +170,8 @@ def create_lmcache_metadata(
 
 
 def extract_mm_features(
-    request: Union["Request", "NewRequestData"], modify: bool = False
-) -> tuple[list[str], list["PlaceholderRange"]]:
+    request: Request | NewRequestData, modify: bool = False
+) -> tuple[list[str], list[PlaceholderRange]]:
     """
     Normalize multimodal information from a Request into parallel lists.
 

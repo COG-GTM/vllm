@@ -14,6 +14,8 @@ Key components:
 4. HF3FSClient: 3FS Client Implementation
 """
 
+from __future__ import annotations
+
 import atexit
 import concurrent
 import copy
@@ -26,7 +28,7 @@ import time
 from concurrent.futures import Future
 from dataclasses import dataclass
 from queue import Empty
-from typing import Any, Optional
+from typing import Any
 
 import numpy as np
 import torch
@@ -103,7 +105,7 @@ class AsyncOperationManager:
     Manages async save/load operations with background threads.
     """
 
-    def __init__(self, connector: "HF3FSKVConnector"):
+    def __init__(self, connector: HF3FSKVConnector):
         # Store connector reference and extract commonly used attributes
         self._connector = connector
         self._device = connector._device
@@ -471,9 +473,9 @@ class HF3FSKVConnector(KVConnectorBase_V1):
 
     def __init__(
         self,
-        vllm_config: "VllmConfig",
+        vllm_config: VllmConfig,
         role: KVConnectorRole,
-        kv_cache_config: "KVCacheConfig",
+        kv_cache_config: KVCacheConfig,
     ):
         super().__init__(
             vllm_config=vllm_config, role=role, kv_cache_config=kv_cache_config
@@ -611,7 +613,7 @@ class HF3FSKVConnector(KVConnectorBase_V1):
         self,
         layer_name: str,
         kv_layer: torch.Tensor,
-        attn_metadata: "AttentionMetadata",
+        attn_metadata: AttentionMetadata,
         **kwargs,
     ) -> None:
         """HF3FSConnector does not do layerwise saving."""
@@ -638,7 +640,7 @@ class HF3FSKVConnector(KVConnectorBase_V1):
                     request.request_id, batch_block_ids, batch_block_hashes
                 )
 
-    def start_load_kv(self, forward_context: "ForwardContext", **kwargs) -> None:
+    def start_load_kv(self, forward_context: ForwardContext, **kwargs) -> None:
         metadata = self._get_connector_metadata()
         if not isinstance(metadata, HF3FSConnectorMetadata):
             logger.error("Invalid metadata type for loading")
@@ -669,7 +671,7 @@ class HF3FSKVConnector(KVConnectorBase_V1):
     ) -> tuple[set[str] | None, set[str] | None]:
         return self._async_manager.get_finished_operations(finished_req_ids)
 
-    def get_kv_connector_stats(self) -> Optional["KVConnectorStats"]:
+    def get_kv_connector_stats(self) -> KVConnectorStats | None:
         """
         Get the KV connector stats collected during the last interval.
         """
@@ -687,13 +689,13 @@ class HF3FSKVConnector(KVConnectorBase_V1):
 
     def request_finished(
         self,
-        request: "Request",
+        request: Request,
         block_ids: list[int],
     ) -> tuple[bool, dict[str, Any] | None]:
         return True, None
 
     def get_num_new_matched_tokens(
-        self, request: "Request", num_computed_tokens: int
+        self, request: Request, num_computed_tokens: int
     ) -> tuple[int, bool]:
         """Get number of new tokens that can be loaded from external cache."""
         try:
@@ -756,7 +758,7 @@ class HF3FSKVConnector(KVConnectorBase_V1):
             return 0, False
 
     def update_state_after_alloc(
-        self, request: "Request", blocks: "KVCacheBlocks", num_external_tokens: int
+        self, request: Request, blocks: KVCacheBlocks, num_external_tokens: int
     ) -> None:
         """Update state after block allocation."""
         state = self._get_or_create_scheduling_state(request.request_id)
@@ -888,7 +890,7 @@ class HF3FSKVConnector(KVConnectorBase_V1):
     @classmethod
     def build_kv_connector_stats(
         cls, data: dict[str, Any] | None = None
-    ) -> Optional["KVConnectorStats"]:
+    ) -> KVConnectorStats | None:
         """
         KVConnectorStats resolution method. This method allows dynamically
         registered connectors to return their own KVConnectorStats object,
@@ -1035,7 +1037,7 @@ class HF3FSKVConnectorStats(KVConnectorStats):
             "num_transfer_task": 0,
         }
 
-    def aggregate(self, other: "KVConnectorStats") -> "KVConnectorStats":
+    def aggregate(self, other: KVConnectorStats) -> KVConnectorStats:
         if not other.is_empty():
             for k, v in other.data.items():
                 accumulator = self.data[k]
