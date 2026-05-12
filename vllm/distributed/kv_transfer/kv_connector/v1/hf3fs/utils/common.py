@@ -1,8 +1,10 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+
+from __future__ import annotations
+
 import threading
 from dataclasses import dataclass, field
-from typing import Optional
 
 from vllm.distributed.kv_transfer.kv_connector.v1.base import KVConnectorMetadata
 from vllm.v1.request import Request
@@ -99,11 +101,11 @@ class HF3FSRequestMetadata:
 
     @staticmethod
     def from_scheduling_state(
-        state: "RequestSchedulingState",
+        state: RequestSchedulingState,
         block_size: int,
         load_op: LoadBlockInfo | None = None,
         skip_leading_blocks: int | None = None,
-    ) -> Optional["HF3FSRequestMetadata"]:
+    ) -> HF3FSRequestMetadata | None:
         """Create request metadata from scheduling state."""
         token_count = len(state.token_ids)
         total_blocks = token_count // block_size
