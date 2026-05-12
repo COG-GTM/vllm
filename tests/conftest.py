@@ -21,10 +21,10 @@ import os
 import socket
 import tempfile
 import threading
-from collections.abc import Generator
+from collections.abc import Callable, Generator
 from contextlib import nullcontext
 from enum import Enum
-from typing import Any, Callable, TypedDict, TypeVar, cast, TYPE_CHECKING, Optional
+from typing import Any, TypedDict, TypeVar, cast, TYPE_CHECKING
 
 import numpy as np
 import pytest
@@ -1121,7 +1121,7 @@ class VllmRunner:
         )
 
     def generate_prompt_perplexity(
-        self, prompts: list[str], mask: Optional[list[str]] = None
+        self, prompts: list[str], mask: list[str] | None = None
     ) -> list[float]:
         """
         Return the perplexity score associated with generating the prompts
