@@ -1,7 +1,8 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+from __future__ import annotations
 
-from typing import TYPE_CHECKING, Any, Union
+from typing import TYPE_CHECKING, Any
 
 import torch
 from safetensors.torch import _TYPES as _SAFETENSORS_TO_TORCH_DTYPE
@@ -65,7 +66,7 @@ class AWQConfig(QuantizationConfig):
             f"modules_to_not_convert={self.modules_to_not_convert})"
         )
 
-    def get_name(self) -> "QuantizationMethods":
+    def get_name(self) -> QuantizationMethods:
         return "awq"
 
     def get_supported_act_dtypes(self) -> list[torch.dtype]:
@@ -85,7 +86,7 @@ class AWQConfig(QuantizationConfig):
         ]
 
     @classmethod
-    def from_config(cls, config: dict[str, Any]) -> "AWQConfig":
+    def from_config(cls, config: dict[str, Any]) -> AWQConfig:
         weight_bits = cls.get_from_keys(config, ["w_bit", "bits"])
         group_size = cls.get_from_keys(config, ["q_group_size", "group_size"])
         zero_point = cls.get_from_keys(config, ["zero_point"])
@@ -96,7 +97,7 @@ class AWQConfig(QuantizationConfig):
 
     def get_quant_method(
         self, layer: torch.nn.Module, prefix: str
-    ) -> Union["LinearMethodBase", "QuantizeMethodBase"] | None:
+    ) -> LinearMethodBase | QuantizeMethodBase | None:
         if isinstance(layer, LinearBase):
             if is_layer_skipped(
                 prefix,
@@ -142,7 +143,7 @@ class AWQConfig(QuantizationConfig):
             return awq_marlin_config.get_quant_method(layer, prefix)
         return None
 
-    def apply_vllm_mapper(self, hf_to_vllm_mapper: "WeightsMapper"):
+    def apply_vllm_mapper(self, hf_to_vllm_mapper: WeightsMapper):
         if self.modules_to_not_convert:
             self.modules_to_not_convert = hf_to_vllm_mapper.apply_list(
                 self.modules_to_not_convert

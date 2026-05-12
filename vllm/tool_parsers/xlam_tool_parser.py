@@ -1,9 +1,10 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
 # ruff: noqa
+from __future__ import annotations
 import json
 from collections.abc import Sequence
-from typing import Any, Optional, Union
+from typing import Any
 
 import regex as re
 
@@ -63,7 +64,7 @@ class xLAMToolParser(ToolParser):
 
     def preprocess_model_output(
         self, model_output: str
-    ) -> tuple[Optional[str], Optional[str]]:
+    ) -> tuple[str | None, str | None]:
         """
         Preprocess the model output to extract content and potential tool calls.
         Returns:
@@ -194,7 +195,7 @@ class xLAMToolParser(ToolParser):
         current_token_ids: Sequence[int],
         delta_token_ids: Sequence[int],
         request: ChatCompletionRequest,
-    ) -> Union[DeltaMessage, None]:
+    ) -> DeltaMessage | None:
         """
         Extract tool calls for streaming mode.
         """

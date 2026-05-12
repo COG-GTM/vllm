@@ -1,10 +1,11 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+from __future__ import annotations
 
 import enum
 from enum import Enum
 from fractions import Fraction
-from typing import TYPE_CHECKING, Any, Union
+from typing import TYPE_CHECKING, Any
 
 import torch
 from safetensors.torch import _TYPES as _SAFETENSORS_TO_TORCH_DTYPE
@@ -141,7 +142,7 @@ class GPTQConfig(QuantizationConfig):
         return ["quantize_config.json"]
 
     @classmethod
-    def from_config(cls, config: dict[str, Any]) -> "GPTQConfig":
+    def from_config(cls, config: dict[str, Any]) -> GPTQConfig:
         dynamic = cls.get_from_keys_or(config, ["dynamic"], default={})
         dynamic = {} if dynamic is None else dynamic
 
@@ -171,7 +172,7 @@ class GPTQConfig(QuantizationConfig):
 
     def get_quant_method(
         self, layer: torch.nn.Module, prefix: str
-    ) -> Union["GPTQLinearMethod", "QuantizeMethodBase"] | None:
+    ) -> GPTQLinearMethod | QuantizeMethodBase | None:
         if isinstance(layer, FusedMoE):
             # GPTQ MoE support: fall back to MoeWNA16 for broad compatibility
             from .moe_wna16 import MoeWNA16Config
@@ -188,7 +189,7 @@ class GPTQConfig(QuantizationConfig):
 
         return get_linear_quant_method(self, layer, prefix, GPTQLinearMethod)
 
-    def apply_vllm_mapper(self, hf_to_vllm_mapper: "WeightsMapper"):
+    def apply_vllm_mapper(self, hf_to_vllm_mapper: WeightsMapper):
         if self.modules_in_block_to_quantize is not None:
             self.modules_in_block_to_quantize = hf_to_vllm_mapper.apply_list(
                 self.modules_in_block_to_quantize
