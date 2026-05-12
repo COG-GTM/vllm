@@ -1,11 +1,12 @@
 # SPDX-License-Identifier: Apache-2.0
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
+from __future__ import annotations
 
 import os
 import time
 from collections import defaultdict
 from concurrent.futures import Future
-from typing import TYPE_CHECKING, Union
+from typing import TYPE_CHECKING
 
 import numpy as np
 
@@ -122,12 +123,12 @@ try:
 
         def execute_model_ray(
             self,
-            execute_model_input: tuple["SchedulerOutput", "GrammarOutput"]
-            | tuple["SchedulerOutput", "GrammarOutput", "IntermediateTensors"],
-        ) -> Union[
-            "ModelRunnerOutput",
-            tuple["SchedulerOutput", "GrammarOutput", "IntermediateTensors"],
-        ]:
+            execute_model_input: tuple[SchedulerOutput, GrammarOutput]
+            | tuple[SchedulerOutput, GrammarOutput, IntermediateTensors],
+        ) -> (
+            ModelRunnerOutput
+            | tuple[SchedulerOutput, GrammarOutput, IntermediateTensors]
+        ):
             # This method is used by Ray Compiled Graph to execute the model,
             # and it needs a special logic of self.setup_device_if_necessary()
             self.setup_device_if_necessary()
@@ -193,7 +194,7 @@ except ImportError as e:
     RayWorkerWrapper = None  # type: ignore
 
 
-def detach_zero_copy_from_model_runner_output(output: "ModelRunnerOutput") -> None:
+def detach_zero_copy_from_model_runner_output(output: ModelRunnerOutput) -> None:
     """Detach Ray SHM-channel zero-copy buffers from a ModelRunnerOutput in-place.
 
     Ray compiled DAG SHM channels may return zero-copy objects (e.g. `np.ndarray`)
@@ -275,7 +276,7 @@ def assert_ray_available():
 
 
 def _verify_bundles(
-    placement_group: "PlacementGroup",
+    placement_group: PlacementGroup,
     parallel_config: ParallelConfig,
     device_str: str,
     require_gpu_on_driver: bool = True,
@@ -350,7 +351,7 @@ def build_actor_name(
 
 
 def get_bundles_for_indices(
-    placement_group: "PlacementGroup",
+    placement_group: PlacementGroup,
     bundle_indices: list[int],
     world_size: int,
 ) -> list[tuple[int, str, str]]:
@@ -380,7 +381,7 @@ def get_bundles_for_indices(
 
 
 def get_bundles_sorted_by_node(
-    placement_group: "PlacementGroup",
+    placement_group: PlacementGroup,
 ) -> list[tuple[int, str, str]]:
     """
     Return GPU bundle indices paired with node IDs and node IPs,
@@ -440,7 +441,7 @@ def get_bundles_sorted_by_node(
     return bundle_to_node_id
 
 
-def _wait_until_pg_ready(current_placement_group: "PlacementGroup"):
+def _wait_until_pg_ready(current_placement_group: PlacementGroup):
     """Wait until a placement group is ready.
 
     It prints the informative log messages if the placement group is
@@ -505,7 +506,7 @@ def _wait_until_pg_ready(current_placement_group: "PlacementGroup"):
             ) from None
 
 
-def _wait_until_pg_removed(current_placement_group: "PlacementGroup"):
+def _wait_until_pg_removed(current_placement_group: PlacementGroup):
     ray.util.remove_placement_group(current_placement_group)
     s = time.time()
     wait_interval = 10
