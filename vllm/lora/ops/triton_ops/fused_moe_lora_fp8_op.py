@@ -2,8 +2,6 @@
 # SPDX-FileCopyrightText: Copyright contributors to the vLLM project
 
 
-from typing import List  # noqa: UP035
-
 import torch
 
 from vllm.distributed import (
@@ -380,7 +378,7 @@ def _fused_moe_lora_shrink_fp8(
     use_int8_w8a8: bool = False,
     use_int8_w8a16: bool = False,
     per_channel_quant: bool = False,
-    block_shape: List[int] | None = None,  # noqa: UP006, UP007
+    block_shape: list[int] | None = None,
 ) -> None:
     if use_fp8_w8a8 or use_int8_w8a8:
         assert lora_a_scale_stacked is not None, (
@@ -547,7 +545,7 @@ def _fused_moe_lora_expand_fp8(
     use_int8_w8a8: bool = False,
     use_int8_w8a16: bool = False,
     per_channel_quant: bool = False,
-    block_shape: List[int] | None = None,  # noqa: UP006, UP007
+    block_shape: list[int] | None = None,
 ) -> None:
     if use_fp8_w8a8 or use_int8_w8a8:
         assert lora_b_scale_stacked is not None, (
@@ -726,7 +724,7 @@ def _fused_moe_lora_fp8(
     use_int8_w8a8: bool = False,
     use_int8_w8a16: bool = False,
     per_channel_quant: bool = False,
-    block_shape: List[int] | None = None,  # noqa: UP006, UP007
+    block_shape: list[int] | None = None,
 ) -> None:
     assert len(lora_a_stacked) == len(lora_b_stacked) > 0
     assert topk_weights.dim() == qcurr_hidden_states.dim() == 2
@@ -909,7 +907,7 @@ def _fused_moe_lora_fp8_fake(
     use_int8_w8a8: bool = False,
     use_int8_w8a16: bool = False,
     per_channel_quant: bool = False,
-    block_shape: List[int] | None = None,  # noqa: UP006, UP007
+    block_shape: list[int] | None = None,
 ) -> None:
     return
 
@@ -950,7 +948,7 @@ def _fused_moe_lora_shrink_fp8_fake(
     use_int8_w8a8: bool = False,
     use_int8_w8a16: bool = False,
     per_channel_quant: bool = False,
-    block_shape: List[int] | None = None,  # noqa: UP006, UP007
+    block_shape: list[int] | None = None,
 ) -> None:
     return
 
@@ -993,7 +991,7 @@ def _fused_moe_lora_expand_fp8_fake(
     use_int8_w8a8: bool = False,
     use_int8_w8a16: bool = False,
     per_channel_quant: bool = False,
-    block_shape: List[int] | None = None,  # noqa: UP006, UP007
+    block_shape: list[int] | None = None,
     use_gdc: bool = False,
 ) -> None:
     return
