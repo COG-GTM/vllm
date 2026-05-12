@@ -17,9 +17,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import annotations
+
 from collections.abc import Callable, Mapping, Sequence
 from math import pi
-from typing import Annotated, Any, Optional, TypeAlias
+from typing import Annotated, Any, TypeAlias
 
 import torch
 from torch import Tensor, broadcast_tensors, nn
@@ -115,9 +117,9 @@ class MusicFlamingoRotaryEmbedding(nn.Module):
     @staticmethod
     def compute_default_rope_parameters(
         config: MusicFlamingoConfig | None = None,
-        device: Optional["torch.device"] = None,
+        device: torch.device | None = None,
         seq_len: int | None = None,
-    ) -> tuple["torch.Tensor", float]:
+    ) -> tuple[torch.Tensor, float]:
         del seq_len
         base = config.rope_parameters["rope_theta"]
         dim = getattr(config, "head_dim", None) or (
