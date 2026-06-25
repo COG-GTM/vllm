@@ -6,7 +6,7 @@ Reinforcement Learning from Human Feedback (RLHF) is a technique that fine-tunes
 
 Before integrating vLLM into an RL training loop, ensure:
 
-- vLLM is installed with GPU support (see the main [installation guide](../getting_started/installation/index.md))
+- vLLM is installed with GPU support (see the main [installation guide](../getting_started/installation/README.md))
 - The model you want to fine-tune is supported by vLLM (see [supported models](../models/supported_models.md))
 - For weight synchronization between trainer and inference engine, review the [Weight Transfer](weight_transfer/README.md) backends (NCCL for multi-GPU, IPC for same-GPU)
 
