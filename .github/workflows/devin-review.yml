@@ -1,0 +1,46 @@
+name: Devin Review
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  devin-review:
+    name: Trigger Devin Review
+    if: github.event.pull_request.draft == false
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Devin Review
+        env:
+          DEVIN_API_KEY: ${{ secrets.DEVIN_API_KEY }}
+          # Org ID (prefix: org_). Override via the DEVIN_ORG_ID repo/org variable.
+          DEVIN_ORG_ID: ${{ vars.DEVIN_ORG_ID || 'org_69IXJFLrljx8zSAw' }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: |
+          if [ -z "${DEVIN_API_KEY}" ]; then
+            echo "::error::DEVIN_API_KEY secret is not set. Add it under Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+          echo "Triggering Devin Review for ${PR_URL}"
+          http_code=$(curl -sS -o response.json -w "%{http_code}" -X POST \
+            "https://api.devin.ai/v3/organizations/${DEVIN_ORG_ID}/pr-reviews" \
+            -H "Authorization: Bearer ${DEVIN_API_KEY}" \
+            -H "Content-Type: application/json" \
+            -d "{\"pr_url\": \"${PR_URL}\"}")
+
+          echo "Response (HTTP ${http_code}):"
+          cat response.json
+          echo
+
+          if [ "${http_code}" -ge 300 ]; then
+            echo "::error::Failed to trigger Devin Review (HTTP ${http_code})."
+            exit 1
+          fi
