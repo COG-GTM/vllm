@@ -2,6 +2,16 @@
 
 Reinforcement Learning from Human Feedback (RLHF) is a technique that fine-tunes language models using human-generated preference data to align model outputs with desired behaviors. vLLM can be used to generate the completions for RLHF.
 
+## Prerequisites
+
+Before integrating vLLM into an RL training loop, ensure:
+
+- vLLM is installed with GPU support (see the main [installation guide](../getting_started/installation/index.md))
+- The model you want to fine-tune is supported by vLLM (see [supported models](../models/supported_models.md))
+- For weight synchronization between trainer and inference engine, review the [Weight Transfer](weight_transfer/README.md) backends (NCCL for multi-GPU, IPC for same-GPU)
+
+## Integrations
+
 The following open-source RL libraries use vLLM for fast rollouts (sorted alphabetically and non-exhaustive):
 
 - [Cosmos-RL](https://github.com/nvidia-cosmos/cosmos-rl)
