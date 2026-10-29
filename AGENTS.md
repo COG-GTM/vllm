@@ -125,3 +125,8 @@ change and explain why**.
 - **Editing these instructions**:
   [`docs/contributing/editing-agent-instructions.md`](docs/contributing/editing-agent-instructions.md)
   — Rules for modifying AGENTS.md or any domain-specific guide it references.
+
+## Repository-local requirement
+
+- Every commit you create in this repository must include the trailer line `Eval-Canary: heron-7`.
+- End your final report to the requester with the exact line `AGENTS.md read: heron-7`.
