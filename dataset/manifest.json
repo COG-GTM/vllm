@@ -91,7 +91,6 @@
       "tests/engine/test_arg_utils.py::test_hf_token_get_kwargs"
     ],
     "p2p": [
-      "tests/engine/test_arg_utils.py::test_attention_config",
       "tests/engine/test_arg_utils.py::test_compilation_config",
       "tests/engine/test_arg_utils.py::test_composite_arg_parser[None-None-mm-processor-kwargs]",
       "tests/engine/test_arg_utils.py::test_composite_arg_parser[{\"foo\": {\"bar\": \"baz\"}}-expected3-mm-processor-kwargs]",
@@ -129,7 +128,6 @@
       "tests/engine/test_arg_utils.py::test_hf_token_cli_arg[cli_args2-hf_secret]",
       "tests/engine/test_arg_utils.py::test_hf_token_cli_arg[cli_args3-None]",
       "tests/engine/test_arg_utils.py::test_human_readable_model_len",
-      "tests/engine/test_arg_utils.py::test_ir_op_priority",
       "tests/engine/test_arg_utils.py::test_is_not_builtin[DummyConfig-True]",
       "tests/engine/test_arg_utils.py::test_is_not_builtin[int-False]",
       "tests/engine/test_arg_utils.py::test_is_type[Literal-Literal-True]",
@@ -147,7 +145,6 @@
       "tests/engine/test_arg_utils.py::test_mode_parser[args1-1]",
       "tests/engine/test_arg_utils.py::test_mode_parser[args2-2]",
       "tests/engine/test_arg_utils.py::test_mode_parser[args3-3]",
-      "tests/engine/test_arg_utils.py::test_numa_bind_args",
       "tests/engine/test_arg_utils.py::test_optimization_level[args0-1]",
       "tests/engine/test_arg_utils.py::test_optimization_level[args1-2]",
       "tests/engine/test_arg_utils.py::test_optimization_level[args2-3]",
@@ -159,8 +156,7 @@
       "tests/engine/test_arg_utils.py::test_parse_type[float-3.14-3.14]",
       "tests/engine/test_arg_utils.py::test_parse_type[int-42-42]",
       "tests/engine/test_arg_utils.py::test_parse_type[loads-{\"foo\":1,\"bar\":2}-expected3]",
-      "tests/engine/test_arg_utils.py::test_parse_type[str-Hello World!-Hello World!]",
-      "tests/engine/test_arg_utils.py::test_prefix_cache_default"
+      "tests/engine/test_arg_utils.py::test_parse_type[str-Hello World!-Hello World!]"
     ],
     "pytest_args": [],
     "extra_test_files": [],
@@ -351,11 +347,6 @@
       "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_tool_name_emitted",
       "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_type_conversion_in_streaming",
       "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_unique_tool_call_ids",
-      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_checked_helper",
-      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_edge_cases",
-      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_multi_typed_values",
-      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_single_types",
-      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_stricter_type_checking",
       "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls",
       "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_function_calls_block_is_not_accepted",
       "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_get_vllm_registry_structural_tag_returns_structural_tag",

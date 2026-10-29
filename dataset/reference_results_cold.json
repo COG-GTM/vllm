@@ -1,0 +1,1093 @@
+{
+  "vllm-41991": {
+    "base": {
+      "task_id": "vllm-41991",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41991.py::test_malformed_arguments_terminate_without_prescribing_recovery": false,
+        "tests/eval_hidden/test_vllm_41991.py::test_malformed_array_terminates_without_prescribing_recovery": false,
+        "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a[b]": false,
+        "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a]b]": false,
+        "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_malformed_partial_array": false,
+        "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_string_element_with_closing_bracket": false
+      },
+      "p2p_total": 48,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k not test_stray_closing_bracket tests/eval_hidden/test_vllm_41991.py tests/tool_parsers/test_gemma4_tool_parser.py"
+    },
+    "gt": {
+      "task_id": "vllm-41991",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41991.py::test_malformed_arguments_terminate_without_prescribing_recovery": true,
+        "tests/eval_hidden/test_vllm_41991.py::test_malformed_array_terminates_without_prescribing_recovery": true,
+        "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a[b]": true,
+        "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a]b]": true,
+        "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_malformed_partial_array": true,
+        "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_string_element_with_closing_bracket": true
+      },
+      "p2p_total": 48,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k not test_stray_closing_bracket tests/eval_hidden/test_vllm_41991.py tests/tool_parsers/test_gemma4_tool_parser.py"
+    }
+  },
+  "vllm-40951": {
+    "base": {
+      "task_id": "vllm-40951",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/engine/test_arg_utils.py::test_get_kwargs": false,
+        "tests/engine/test_arg_utils.py::test_hf_token_get_kwargs": false
+      },
+      "p2p_total": 70,
+      "p2p_regressions": [
+        "tests/engine/test_arg_utils.py::test_attention_config",
+        "tests/engine/test_arg_utils.py::test_ir_op_priority",
+        "tests/engine/test_arg_utils.py::test_numa_bind_args",
+        "tests/engine/test_arg_utils.py::test_prefix_cache_default"
+      ],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/engine/test_arg_utils.py"
+    },
+    "gt": {
+      "task_id": "vllm-40951",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/engine/test_arg_utils.py::test_get_kwargs": true,
+        "tests/engine/test_arg_utils.py::test_hf_token_get_kwargs": true
+      },
+      "p2p_total": 66,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/engine/test_arg_utils.py"
+    }
+  },
+  "vllm-41795": {
+    "base": {
+      "task_id": "vllm-41795",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_basic": false,
+        "tests/v1/kv_offload/cpu/test_manager.py::test_cpu_manager": false
+      },
+      "p2p_total": 11,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/v1/kv_offload/cpu/test_manager.py"
+    },
+    "gt": {
+      "task_id": "vllm-41795",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_basic": true,
+        "tests/v1/kv_offload/cpu/test_manager.py::test_cpu_manager": true
+      },
+      "p2p_total": 11,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/v1/kv_offload/cpu/test_manager.py"
+    }
+  },
+  "vllm-41730": {
+    "base": {
+      "task_id": "vllm-41730",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-pre_v11-characters]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-characters]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-fragments]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-one_chunk]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-pre_v11-characters]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-characters]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-fragments]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-one_chunk]": false
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41730.py"
+    },
+    "gt": {
+      "task_id": "vllm-41730",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-pre_v11-characters]": true,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-characters]": true,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-fragments]": true,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-one_chunk]": true,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-pre_v11-characters]": true,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-characters]": true,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-fragments]": true,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-one_chunk]": true
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41730.py"
+    }
+  },
+  "vllm-40726": {
+    "base": {
+      "task_id": "vllm-40726",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-allocation]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-conversion]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-repeated_objects]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-split_submodules]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-allocation]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-conversion]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-repeated_objects]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-split_submodules]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[False]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[True]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_40726.py"
+    },
+    "gt": {
+      "task_id": "vllm-40726",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-allocation]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-conversion]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-repeated_objects]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-split_submodules]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-allocation]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-conversion]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-repeated_objects]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-split_submodules]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[False]": true,
+        "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[True]": true
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_40726.py"
+    }
+  },
+  "vllm-41266": {
+    "base": {
+      "task_id": "vllm-41266",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41266.py::test_all_chunk_generators_are_advanced_and_cleaned_up": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-transcribe]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-translate]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-transcribe]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-translate]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[transcribe]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[translate]": false
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41266.py"
+    },
+    "gt": {
+      "task_id": "vllm-41266",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41266.py::test_all_chunk_generators_are_advanced_and_cleaned_up": true,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-transcribe]": true,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-translate]": true,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-transcribe]": true,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-translate]": true,
+        "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[transcribe]": true,
+        "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[translate]": true
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41266.py"
+    }
+  },
+  "vllm-41801": {
+    "base": {
+      "task_id": "vllm-41801",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_arguments_wrapper_repaired": false,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_input_wrapper_repaired": false,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_string_attr_true_preserves_literal_despite_schema": false,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_string_attr_true_preserves_literal_in_streaming": false,
+        "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls_arguments_wrapper": false
+      },
+      "p2p_total": 52,
+      "p2p_regressions": [
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_checked_helper",
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_edge_cases",
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_multi_typed_values",
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_single_types",
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_stricter_type_checking"
+      ],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_deepseekv32_tool_parser.py tests/tool_parsers/test_deepseekv4_tool_parser.py"
+    },
+    "gt": {
+      "task_id": "vllm-41801",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_arguments_wrapper_repaired": true,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_input_wrapper_repaired": true,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_string_attr_true_preserves_literal_despite_schema": true,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_string_attr_true_preserves_literal_in_streaming": true,
+        "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls_arguments_wrapper": true
+      },
+      "p2p_total": 47,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_deepseekv32_tool_parser.py tests/tool_parsers/test_deepseekv4_tool_parser.py"
+    }
+  },
+  "vllm-40749": {
+    "base": {
+      "task_id": "vllm-40749",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[2-True-0]": false
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k sample_tokens_ or select_common_block_size_ tests/v1/worker/test_gpu_model_runner.py"
+    },
+    "gt": {
+      "task_id": "vllm-40749",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[2-True-0]": true
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k sample_tokens_ or select_common_block_size_ tests/v1/worker/test_gpu_model_runner.py"
+    }
+  },
+  "vllm-42162": {
+    "base": {
+      "task_id": "vllm-42162",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_matches_molmoweb_processor_tokens": false,
+        "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_respects_disabled_col_tokens": false
+      },
+      "p2p_total": 0,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/models/multimodal/processing/test_molmo2.py"
+    },
+    "gt": {
+      "task_id": "vllm-42162",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_matches_molmoweb_processor_tokens": true,
+        "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_respects_disabled_col_tokens": true
+      },
+      "p2p_total": 0,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/models/multimodal/processing/test_molmo2.py"
+    }
+  },
+  "vllm-41355": {
+    "base": {
+      "task_id": "vllm-41355",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-annotations]": false,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-metadata]": false,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-empty-summary]": false,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-summary-content]": false
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41355.py"
+    },
+    "gt": {
+      "task_id": "vllm-41355",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-annotations]": true,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-metadata]": true,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-empty-summary]": true,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-summary-content]": true
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41355.py"
+    }
+  },
+  "vllm-41269": {
+    "base": {
+      "task_id": "vllm-41269",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[chat]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[completion]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[responses]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[chat]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[completion]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[responses]": false
+      },
+      "p2p_total": 13,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41269.py"
+    },
+    "gt": {
+      "task_id": "vllm-41269",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[chat]": true,
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[completion]": true,
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[responses]": true,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[chat]": true,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[completion]": true,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[responses]": true
+      },
+      "p2p_total": 13,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41269.py"
+    }
+  },
+  "vllm-41681": {
+    "base": {
+      "task_id": "vllm-41681",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41681.py::test_orjson_float_endpoint_preserves_schema_and_uses_fast_representation[float32]": false
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41681.py"
+    },
+    "gt": {
+      "task_id": "vllm-41681",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41681.py::test_orjson_float_endpoint_preserves_schema_and_uses_fast_representation[float32]": true
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41681.py"
+    }
+  },
+  "vllm-41799": {
+    "base": {
+      "task_id": "vllm-41799",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-560]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-1120]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-140]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-560]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-70]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-overrides-nested]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-560]": false
+      },
+      "p2p_total": 14,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41799.py"
+    },
+    "gt": {
+      "task_id": "vllm-41799",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-560]": true,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-1120]": true,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-140]": true,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-560]": true,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-70]": true,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-overrides-nested]": true,
+        "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-560]": true
+      },
+      "p2p_total": 14,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41799.py"
+    }
+  },
+  "vllm-42244": {
+    "base": {
+      "task_id": "vllm-42244",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42244.py::test_language_weights_are_consumed_before_iterator_advances": false,
+        "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[vision-only-reused-buffer]": false,
+        "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[with-sound-reused-buffer]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42244.py"
+    },
+    "gt": {
+      "task_id": "vllm-42244",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42244.py::test_language_weights_are_consumed_before_iterator_advances": true,
+        "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[vision-only-reused-buffer]": true,
+        "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[with-sound-reused-buffer]": true
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42244.py"
+    }
+  },
+  "vllm-41932": {
+    "base": {
+      "task_id": "vllm-41932",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41932.py::test_greedy_dispatch_and_copyback[shared-sampler]": false,
+        "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[draft-probs-shared-sampler]": false,
+        "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[no-draft-probs-shared-sampler]": false,
+        "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[greedy]": false,
+        "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[random]": false
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41932.py"
+    },
+    "gt": {
+      "task_id": "vllm-41932",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41932.py::test_greedy_dispatch_and_copyback[shared-sampler]": true,
+        "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[draft-probs-shared-sampler]": true,
+        "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[no-draft-probs-shared-sampler]": true,
+        "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[greedy]": true,
+        "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[random]": true
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41932.py"
+    }
+  },
+  "vllm-41806": {
+    "base": {
+      "task_id": "vllm-41806",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41806.py::test_actor_initialization_resolves_its_own_host[local-default]": false,
+        "tests/eval_hidden/test_vllm_41806.py::test_driver_host_not_forwarded_in_actor_runtime_environment": false,
+        "tests/eval_hidden/test_vllm_41806.py::test_host_does_not_affect_compile_factors": false,
+        "tests/eval_hidden/test_vllm_41806.py::test_worker_environment_excludes_host_but_keeps_ordinary_variables": false
+      },
+      "p2p_total": 1,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41806.py"
+    },
+    "gt": {
+      "task_id": "vllm-41806",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41806.py::test_actor_initialization_resolves_its_own_host[local-default]": true,
+        "tests/eval_hidden/test_vllm_41806.py::test_driver_host_not_forwarded_in_actor_runtime_environment": true,
+        "tests/eval_hidden/test_vllm_41806.py::test_host_does_not_affect_compile_factors": true,
+        "tests/eval_hidden/test_vllm_41806.py::test_worker_environment_excludes_host_but_keeps_ordinary_variables": true
+      },
+      "p2p_total": 1,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41806.py"
+    }
+  },
+  "vllm-39212": {
+    "base": {
+      "task_id": "vllm-39212",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[async]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[http]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[offline]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[worker]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[finish_weight_update]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[update_weights]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_double_start_rejected_without_reinitializing": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[async]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[http]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[offline]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[worker]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[finish_weight_update]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[update_weights]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39212.py"
+    },
+    "gt": {
+      "task_id": "vllm-39212",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[async]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[http]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[offline]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[worker]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[finish_weight_update]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[update_weights]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_double_start_rejected_without_reinitializing": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[async]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[http]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[offline]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[worker]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[finish_weight_update]": true,
+        "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[update_weights]": true
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39212.py"
+    }
+  },
+  "vllm-42081": {
+    "base": {
+      "task_id": "vllm-42081",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[bf16_to_fp32]": false,
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp32_to_bf16]": false,
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp64_to_fp32]": false
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42081.py"
+    },
+    "gt": {
+      "task_id": "vllm-42081",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[bf16_to_fp32]": true,
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp32_to_bf16]": true,
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp64_to_fp32]": true
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42081.py"
+    }
+  },
+  "vllm-42026": {
+    "base": {
+      "task_id": "vllm-42026",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_preserved_in_arg_values": false,
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_whitespace_preserved_in_arg_values": false
+      },
+      "p2p_total": 60,
+      "p2p_regressions": [
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_args_same_line",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_args_with_newlines",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_content_before",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_empty_content_none",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_multiple",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_no_tool_call",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_content_none",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_zero_arg_inline",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_zero_arg_newline",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47Streaming::test_no_args",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47Streaming::test_with_args",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_delimiter_preserved_transformers_5x",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[multiple_tool_calls]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[single_tool_call]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_chinese_content]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_content_before]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_mixed_args]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_empty_arguments",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_incomplete_tool_call",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_malformed_xml",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_mixed_content",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_no_tools",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_numeric_deserialization",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_special_characters",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_with_thinking_tags",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_malformed_tool_call_no_regex_match",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[1]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[2]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[5]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[1]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[2]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[3]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[5]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[8]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_extreme_single_chunk",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[1]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[2]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[3]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[5]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[8]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[1]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[2]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[3]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[5]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[8]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_basic_functionality",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_content_between_tool_calls_multi_token",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_empty_tool_call",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_entire_tool_call_at_once",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_incremental_string_value",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_json_escape_in_string",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_long_content_incremental",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multi_token_chunks",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multi_token_with_multiple_args",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multiple_tool_calls_sequential",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_no_tool_calls",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_prev_tool_call_arr_updates",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_with_content_before_tool_calls",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_unicode_characters_preserved",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_zero_argument_tool_call"
+      ],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_glm47_moe_tool_parser.py tests/tool_parsers/test_glm4_moe_tool_parser.py"
+    },
+    "gt": {
+      "task_id": "vllm-42026",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_preserved_in_arg_values": false,
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_whitespace_preserved_in_arg_values": false
+      },
+      "p2p_total": 60,
+      "p2p_regressions": [
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_args_same_line",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_args_with_newlines",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_content_before",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_empty_content_none",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_multiple",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_no_tool_call",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_content_none",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_zero_arg_inline",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_zero_arg_newline",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47Streaming::test_no_args",
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47Streaming::test_with_args",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_delimiter_preserved_transformers_5x",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[multiple_tool_calls]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[single_tool_call]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_chinese_content]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_content_before]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_mixed_args]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_empty_arguments",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_incomplete_tool_call",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_malformed_xml",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_mixed_content",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_no_tools",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_numeric_deserialization",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_special_characters",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_with_thinking_tags",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_malformed_tool_call_no_regex_match",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[1]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[2]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[5]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[1]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[2]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[3]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[5]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[8]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_extreme_single_chunk",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[1]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[2]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[3]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[5]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[8]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[1]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[2]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[3]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[5]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[8]",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_basic_functionality",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_content_between_tool_calls_multi_token",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_empty_tool_call",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_entire_tool_call_at_once",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_incremental_string_value",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_json_escape_in_string",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_long_content_incremental",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multi_token_chunks",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multi_token_with_multiple_args",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multiple_tool_calls_sequential",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_no_tool_calls",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_prev_tool_call_arr_updates",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_with_content_before_tool_calls",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_unicode_characters_preserved",
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_zero_argument_tool_call"
+      ],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_glm47_moe_tool_parser.py tests/tool_parsers/test_glm4_moe_tool_parser.py"
+    }
+  },
+  "vllm-41499": {
+    "base": {
+      "task_id": "vllm-41499",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41499.py::test_cli_options_reach_load_config": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_block_size]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_num_threads]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_block_size]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_num_threads]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[1-1024]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[2-4096]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_public_defaults": false
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [
+        "tests/eval_hidden/test_vllm_41499.py::test_cli_without_new_flags_still_constructs"
+      ],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41499.py"
+    },
+    "gt": {
+      "task_id": "vllm-41499",
+      "T": 0.4375,
+      "f2p_rate": 0.875,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41499.py::test_cli_options_reach_load_config": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_block_size]": true,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_num_threads]": true,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_block_size]": true,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_num_threads]": true,
+        "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[1-1024]": true,
+        "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[2-4096]": true,
+        "tests/eval_hidden/test_vllm_41499.py::test_public_defaults": true
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [
+        "tests/eval_hidden/test_vllm_41499.py::test_cli_without_new_flags_still_constructs"
+      ],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41499.py"
+    }
+  },
+  "vllm-41965": {
+    "base": {
+      "task_id": "vllm-41965",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/quantization/test_compressed_tensors.py::test_find_matched_target_returns_none_on_no_match": false,
+        "tests/quantization/test_compressed_tensors.py::test_get_scheme_dict_returns_none_on_no_match": false
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k find_matched_target_returns_none or get_scheme_dict_returns_none or lm_head tests/quantization/test_compressed_tensors.py"
+    },
+    "gt": {
+      "task_id": "vllm-41965",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/quantization/test_compressed_tensors.py::test_find_matched_target_returns_none_on_no_match": true,
+        "tests/quantization/test_compressed_tensors.py::test_get_scheme_dict_returns_none_on_no_match": true
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k find_matched_target_returns_none or get_scheme_dict_returns_none or lm_head tests/quantization/test_compressed_tensors.py"
+    }
+  },
+  "vllm-41916": {
+    "base": {
+      "task_id": "vllm-41916",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41916.py::test_labels_do_not_change_counter_identity": false,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[created]": false,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[gauge]": false,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[sum]": false
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41916.py"
+    },
+    "gt": {
+      "task_id": "vllm-41916",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41916.py::test_labels_do_not_change_counter_identity": true,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[created]": true,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[gauge]": true,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[sum]": true
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41916.py"
+    }
+  },
+  "vllm-42188": {
+    "base": {
+      "task_id": "vllm-42188",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42188.py::test_legacy_unresolvable_name[null_name]": false,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[missing_id]": false,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[null_id_and_name]": false,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[unmatched_id]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42188.py"
+    },
+    "gt": {
+      "task_id": "vllm-42188",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42188.py::test_legacy_unresolvable_name[null_name]": true,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[missing_id]": true,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[null_id_and_name]": true,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[unmatched_id]": true
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42188.py"
+    }
+  },
+  "vllm-40891": {
+    "base": {
+      "task_id": "vllm-40891",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-async_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-sync_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-async_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-sync_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_initialization_creates_no_output_thread_pool[async_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[async_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[sync_scheduler]": false
+      },
+      "p2p_total": 5,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40891.py"
+    },
+    "gt": {
+      "task_id": "vllm-40891",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-async_scheduler]": true,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-sync_scheduler]": true,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-async_scheduler]": true,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-sync_scheduler]": true,
+        "tests/eval_hidden/test_vllm_40891.py::test_initialization_creates_no_output_thread_pool[async_scheduler]": true,
+        "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[async_scheduler]": true,
+        "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[sync_scheduler]": true
+      },
+      "p2p_total": 5,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40891.py"
+    }
+  },
+  "vllm-40708": {
+    "base": {
+      "task_id": "vllm-40708",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-1]": false
+      },
+      "p2p_total": 31,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40708.py"
+    },
+    "gt": {
+      "task_id": "vllm-40708",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-1]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-1]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-1]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-1]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-1]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-1]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-1]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-1]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-0]": true,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-1]": true
+      },
+      "p2p_total": 31,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40708.py"
+    }
+  },
+  "vllm-41237": {
+    "base": {
+      "task_id": "vllm-41237",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-MooncakeConnectorV1]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-NixlConnector]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-SomeOOTConnector]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-MooncakeConnectorV1]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-NixlConnector]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-SomeOOTConnector]": false
+      },
+      "p2p_total": 5,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41237.py"
+    },
+    "gt": {
+      "task_id": "vllm-41237",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-MooncakeConnectorV1]": true,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-NixlConnector]": true,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-SomeOOTConnector]": true,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-MooncakeConnectorV1]": true,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-NixlConnector]": true,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-SomeOOTConnector]": true
+      },
+      "p2p_total": 5,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41237.py"
+    }
+  },
+  "vllm-41905": {
+    "base": {
+      "task_id": "vllm-41905",
+      "T": 0,
+      "f2p_rate": 0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41905.py::test_constructed_multitoken_model_can_chain_predictions": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[2]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[3]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[8]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-1]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-2]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-5]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-1]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-2]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-5]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[1]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[2]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[5]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41905.py"
+    },
+    "gt": {
+      "task_id": "vllm-41905",
+      "T": 1,
+      "f2p_rate": 1,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41905.py::test_constructed_multitoken_model_can_chain_predictions": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[2]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[3]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[8]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-1]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-2]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-5]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-1]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-2]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-5]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[1]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[2]": true,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[5]": true
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 0,
+      "command": "/home/ubuntu/evalwork/spot/base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41905.py"
+    }
+  }
+}

@@ -40,3 +40,19 @@ One base and three GT runs per task, using the supplied scorer unchanged. Counts
 - **vllm-41181**: GT fails task-required existing tokenizer serialization compatibility: pickle.loads(pickle.dumps(renderer.get_tokenizer())) returns None, causing AttributeError on encode. BASE passes the same real public-entrypoint round-trip. The GT new reducer calls a pool initializer that has no return on the fast-tokenizer path. Preserve this behavioral compatibility test rather than deleting it to force a clean GT. Not an import/fixture problem or scorer defect.
 - **vllm-39243**: Fair real-parser tests expose a GT semantic gap: streaming character-by-character and seven-character chunks emit incomplete tool marker prefixes as assistant content, e.g. <|tool_call_start| and <|tool_call_st. The task explicitly requires arbitrary chunking without leaking markup. Retaining those assertions yields a nonzero GT pytest return code, so this task is excluded rather than weakening tests to make GT green.
 - **vllm-41423**: Required GT definition excludes the entire implementation change in tests/utils.py. Both BASE and restricted GT execute the old decorator: two child exception/skip assertions fail and two argument/PID side-effect assertions fail identically. No eligible F2P node exists. Overlaying tests/utils.py would leak the implementation and is deliberately not done.
+
+## Cold Hugging Face cache re-validation
+
+Runs kept `~/.cache/huggingface` absent and used the scorer's offline settings.
+
+- `vllm-40951` `tests/engine/test_arg_utils.py::test_attention_config`: offline Hugging Face cache miss (`huggingface_hub` error).
+- `vllm-40951` `tests/engine/test_arg_utils.py::test_ir_op_priority`: offline Hugging Face cache miss (`huggingface_hub` error).
+- `vllm-40951` `tests/engine/test_arg_utils.py::test_numa_bind_args`: offline Hugging Face cache miss (`huggingface_hub` error).
+- `vllm-40951` `tests/engine/test_arg_utils.py::test_prefix_cache_default`: offline Hugging Face cache miss (`huggingface_hub` error).
+- `vllm-41801` `tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_checked_helper`: pytest short summary reported `ERROR` without an exception reason in the captured output.
+- `vllm-41801` `tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_edge_cases`: pytest short summary reported `ERROR` without an exception reason in the captured output.
+- `vllm-41801` `tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_multi_typed_values`: pytest short summary reported `ERROR` without an exception reason in the captured output.
+- `vllm-41801` `tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_single_types`: pytest short summary reported `ERROR` without an exception reason in the captured output.
+- `vllm-41801` `tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_stricter_type_checking`: pytest short summary reported `ERROR` without an exception reason in the captured output.
+
+The scorer still executes the complete overlaid test file, including P2P cases removed from the scoring list. Both GT2 runs reached T=1.0, but pytest still returned 1 for those files.
