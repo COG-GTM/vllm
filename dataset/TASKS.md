@@ -1,5 +1,7 @@
 # vLLM historical-commit evaluation tasks
 
+> STEP 3 execution status: 27 tasks are included and 3 are explicitly excluded. The executable manifest, final reference results, and FAIRNESS_AUDIT.md supersede the historical STEP 2 feasibility evidence below; do not infer executable eligibility from the earlier CPU-verified flag.
+
 Freeze/base: `98661fe012c5c467252d4df8411d2f46190e9268` (2026-05-05). Pool: the 200 squash merges in `98661fe012c5c467252d4df8411d2f46190e9268..d7af6b34d83fc691ad69347ee4d066231e5678ab` (head 2026-05-11). Repository: [COG-GTM/vllm](https://github.com/COG-GTM/vllm).
 
 Ranks 1–20 are primary; ranks 21–30 are held-out/alternates. Primary difficulty mix: **6 easy / 9 medium / 5 hard**. Ranking prioritizes CPU discrimination and base independence, then area coverage and behavioral signal; difficulty reflects reasoning/integration risk, not just diff size. This is an oracle dataset: give an eval agent **only `task_statement`**, never this document or the remaining JSON fields.
@@ -340,6 +342,8 @@ Earlier file overlaps: `[]`.
 ### Agent task statement
 
 Mistral tool-call streaming can fail after the parser has already emitted a valid function name or an initial fragment of JSON arguments. Affected clients see an IndexError in the chat-completion streaming path rather than a completed tool response. Reproduce with incremental Mistral tool-call output containing one or several functions, including arguments split over multiple deltas and output ending immediately after a tool call. The final function names and argument strings must agree with the non-streaming interpretation, and each tool must have complete, independent state as streaming progresses. Ordinary assistant text, no-tool output, older and newer tokenizer formats, and malformed partial fragments must retain their existing behavior. The repair should be local to parsing and must not require loading model weights or changing the external response schema.
+
+Interface requirements: The existing serving integration reads prev_tool_call_arr and streamed_args_for_tool for each streamed tool. Keep these pre-existing parser state collections aligned and complete so serving can finish with no IndexError or duplicate argument suffix; arguments may use any representation already supported by serving (JSON string or parsed mapping).
 
 ### Hidden verification (oracle only)
 
@@ -879,11 +883,9 @@ Earlier file overlaps: `[]`.
 
 ### Agent task statement
 
-Serving MolmoWeb (a Molmo2-architecture checkpoint, e.g. `allenai/MolmoWeb-4B`) with image inputs crashes with a CUDA device-side assert deep in attention. With launch blocking enabled, the first failing invariant is the multimodal embedding merge: the prompt contains more image placeholder tokens than vLLM produced image embeddings (reported example: 550 placeholder tokens vs 536 embeddings, a difference equal to the number of rows in the low-resolution/global crop).
+Serving a MolmoWeb checkpoint with image inputs can crash because the prompt contains more image placeholder tokens than the model produced image embeddings. One reported case has 550 placeholders but 536 embeddings; the difference equals the row count of the low-resolution crop. The per-image metadata must match Hugging Face processor settings that independently control column separators for the full-image grid and single crop, and the single-crop start token. For every combination, the flattened token sequence, per-image lengths, and image-patch positions must agree with the processor so placeholder and embedding counts match. Existing checkpoints must retain current default behavior. Verify the combinations on CPU using a tiny configuration and image grid, without loading weights.
 
-The per-image token metadata vLLM computes (which positions are image patches vs. structural tokens such as column separators and start tokens, and the total length per image) does not follow the Hugging Face Molmo2 processor semantics when the processor configuration controls column tokens for the full-image grid and for the single (low-res) crop independently, and whether a start token is emitted for the single crop.
-
-Expected: for any combination of these processor settings, the flattened per-image length and patch mask computed by vLLM must exactly match the token sequence the HF processor emits, so the number of embeddings equals the number of placeholder tokens. Existing defaults (column tokens on) must keep producing the same result as before for the original Molmo2 checkpoints. The check must be possible on CPU with a tiny synthetic config and image grid, without loading weights.
+Interface requirements: Preserve build_flat_image_bool_length(image_grids, hf_config), returning flattened token IDs and per-image lengths. Accept image_use_col_tokens (bool, default True), use_single_crop_col_tokens (bool or None, default None inheriting image_use_col_tokens), and use_single_crop_start_token (bool, default True) so processor settings can be supplied independently.
 
 ### Hidden verification (oracle only)
 
@@ -1520,6 +1522,8 @@ Earlier file overlaps: `[{"file": "vllm/distributed/kv_transfer/kv_connector/v1/
 ### Agent task statement
 
 vLLM's weight-transfer API for RL training loops currently treats every `update_weights` call as a complete, self-contained update. That makes chunked transfers impossible: trainers that want to bound memory by sending weights in several chunks (e.g. packed CUDA-IPC buffers), or that have multiple senders when the trainer uses pipeline parallelism, need the per-update setup and finalization (such as layerwise reload processing for checkpoint-format weights) to happen exactly once around many partial transfers. Please add an explicit update session to the weight-transfer API: a way to start an update (indicating whether incoming weights are in checkpoint format or already in kernel format), any number of weight-update calls that transfer subsets of weights, and a way to finish the update that performs final processing. This must be exposed consistently across the offline `LLM` API, the async engine client, and the HTTP RLHF endpoints. Misuse should fail clearly: updating or finishing without an active session, or starting a second session while one is active, should raise an error.
+
+Interface requirements: Expose start_weight_update(is_checkpoint_format: bool = True) and finish_weight_update() across Worker, LLM, and AsyncLLM/EngineClient, alongside update_weights. Expose dev-mode HTTP POST /start_weight_update with optional is_checkpoint_format (default true), and POST /finish_weight_update; keep /update_weights and update_info. Invalid session transitions raise RuntimeError.
 
 ### Hidden verification (oracle only)
 

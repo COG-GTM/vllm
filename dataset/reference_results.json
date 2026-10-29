@@ -1,0 +1,2270 @@
+{
+  "vllm-41991": {
+    "base": {
+      "task_id": "vllm-41991",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41991.py::test_malformed_arguments_terminate_without_prescribing_recovery": false,
+        "tests/eval_hidden/test_vllm_41991.py::test_malformed_array_terminates_without_prescribing_recovery": false,
+        "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a[b]": false,
+        "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a]b]": false,
+        "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_malformed_partial_array": false,
+        "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_string_element_with_closing_bracket": false
+      },
+      "p2p_total": 48,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41991-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k not test_stray_closing_bracket tests/eval_hidden/test_vllm_41991.py tests/tool_parsers/test_gemma4_tool_parser.py",
+      "elapsed_seconds": 45.084
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41991",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41991.py::test_malformed_arguments_terminate_without_prescribing_recovery": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_malformed_array_terminates_without_prescribing_recovery": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a[b]": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a]b]": true,
+          "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_malformed_partial_array": true,
+          "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_string_element_with_closing_bracket": true
+        },
+        "p2p_total": 48,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41991-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k not test_stray_closing_bracket tests/eval_hidden/test_vllm_41991.py tests/tool_parsers/test_gemma4_tool_parser.py",
+        "elapsed_seconds": 14.784
+      },
+      {
+        "task_id": "vllm-41991",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41991.py::test_malformed_arguments_terminate_without_prescribing_recovery": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_malformed_array_terminates_without_prescribing_recovery": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a[b]": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a]b]": true,
+          "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_malformed_partial_array": true,
+          "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_string_element_with_closing_bracket": true
+        },
+        "p2p_total": 48,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41991-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k not test_stray_closing_bracket tests/eval_hidden/test_vllm_41991.py tests/tool_parsers/test_gemma4_tool_parser.py",
+        "elapsed_seconds": 24.461
+      },
+      {
+        "task_id": "vllm-41991",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41991.py::test_malformed_arguments_terminate_without_prescribing_recovery": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_malformed_array_terminates_without_prescribing_recovery": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a[b]": true,
+          "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a]b]": true,
+          "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_malformed_partial_array": true,
+          "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_string_element_with_closing_bracket": true
+        },
+        "p2p_total": 48,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41991-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k not test_stray_closing_bracket tests/eval_hidden/test_vllm_41991.py tests/tool_parsers/test_gemma4_tool_parser.py",
+        "elapsed_seconds": 11.492
+      }
+    ]
+  },
+  "vllm-40951": {
+    "base": {
+      "task_id": "vllm-40951",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/engine/test_arg_utils.py::test_get_kwargs": false,
+        "tests/engine/test_arg_utils.py::test_hf_token_get_kwargs": false
+      },
+      "p2p_total": 70,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40951-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/engine/test_arg_utils.py",
+      "elapsed_seconds": 28.476
+    },
+    "gt": [
+      {
+        "task_id": "vllm-40951",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/engine/test_arg_utils.py::test_get_kwargs": true,
+          "tests/engine/test_arg_utils.py::test_hf_token_get_kwargs": true
+        },
+        "p2p_total": 70,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40951-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/engine/test_arg_utils.py",
+        "elapsed_seconds": 22.223
+      },
+      {
+        "task_id": "vllm-40951",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/engine/test_arg_utils.py::test_get_kwargs": true,
+          "tests/engine/test_arg_utils.py::test_hf_token_get_kwargs": true
+        },
+        "p2p_total": 70,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40951-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/engine/test_arg_utils.py",
+        "elapsed_seconds": 21.525
+      },
+      {
+        "task_id": "vllm-40951",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/engine/test_arg_utils.py::test_get_kwargs": true,
+          "tests/engine/test_arg_utils.py::test_hf_token_get_kwargs": true
+        },
+        "p2p_total": 70,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40951-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/engine/test_arg_utils.py",
+        "elapsed_seconds": 15.817
+      }
+    ]
+  },
+  "vllm-41795": {
+    "base": {
+      "task_id": "vllm-41795",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_basic": false,
+        "tests/v1/kv_offload/cpu/test_manager.py::test_cpu_manager": false
+      },
+      "p2p_total": 11,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41795-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/v1/kv_offload/cpu/test_manager.py",
+      "elapsed_seconds": 7.356
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41795",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_basic": true,
+          "tests/v1/kv_offload/cpu/test_manager.py::test_cpu_manager": true
+        },
+        "p2p_total": 11,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41795-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/v1/kv_offload/cpu/test_manager.py",
+        "elapsed_seconds": 6.925
+      },
+      {
+        "task_id": "vllm-41795",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_basic": true,
+          "tests/v1/kv_offload/cpu/test_manager.py::test_cpu_manager": true
+        },
+        "p2p_total": 11,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41795-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/v1/kv_offload/cpu/test_manager.py",
+        "elapsed_seconds": 6.866
+      },
+      {
+        "task_id": "vllm-41795",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_basic": true,
+          "tests/v1/kv_offload/cpu/test_manager.py::test_cpu_manager": true
+        },
+        "p2p_total": 11,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41795-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/v1/kv_offload/cpu/test_manager.py",
+        "elapsed_seconds": 6.937
+      }
+    ]
+  },
+  "vllm-41730": {
+    "base": {
+      "task_id": "vllm-41730",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-pre_v11-characters]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-characters]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-fragments]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-one_chunk]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-pre_v11-characters]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-characters]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-fragments]": false,
+        "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-one_chunk]": false
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41730-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41730.py",
+      "elapsed_seconds": 7.233
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41730",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-pre_v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-fragments]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-one_chunk]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-pre_v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-fragments]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-one_chunk]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41730-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41730.py",
+        "elapsed_seconds": 7.286
+      },
+      {
+        "task_id": "vllm-41730",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-pre_v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-fragments]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-one_chunk]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-pre_v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-fragments]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-one_chunk]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41730-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41730.py",
+        "elapsed_seconds": 7.071
+      },
+      {
+        "task_id": "vllm-41730",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-pre_v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-fragments]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-one_chunk]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-pre_v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-characters]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-fragments]": true,
+          "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-one_chunk]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41730-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41730.py",
+        "elapsed_seconds": 7.206
+      }
+    ]
+  },
+  "vllm-40726": {
+    "base": {
+      "task_id": "vllm-40726",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-allocation]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-conversion]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-repeated_objects]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-split_submodules]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-allocation]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-conversion]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-repeated_objects]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-split_submodules]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[False]": false,
+        "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[True]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40726-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_40726.py",
+      "elapsed_seconds": 8.433
+    },
+    "gt": [
+      {
+        "task_id": "vllm-40726",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-allocation]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-conversion]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-repeated_objects]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-split_submodules]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-allocation]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-conversion]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-repeated_objects]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-split_submodules]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[False]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[True]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40726-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_40726.py",
+        "elapsed_seconds": 8.271
+      },
+      {
+        "task_id": "vllm-40726",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-allocation]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-conversion]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-repeated_objects]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-split_submodules]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-allocation]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-conversion]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-repeated_objects]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-split_submodules]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[False]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[True]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40726-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_40726.py",
+        "elapsed_seconds": 8.226
+      },
+      {
+        "task_id": "vllm-40726",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-allocation]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-conversion]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-repeated_objects]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-split_submodules]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-allocation]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-conversion]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-repeated_objects]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-split_submodules]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[False]": true,
+          "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[True]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40726-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_40726.py",
+        "elapsed_seconds": 7.933
+      }
+    ]
+  },
+  "vllm-41266": {
+    "base": {
+      "task_id": "vllm-41266",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41266.py::test_all_chunk_generators_are_advanced_and_cleaned_up": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-transcribe]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-translate]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-transcribe]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-translate]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[transcribe]": false,
+        "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[translate]": false
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41266-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41266.py",
+      "elapsed_seconds": 6.976
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41266",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41266.py::test_all_chunk_generators_are_advanced_and_cleaned_up": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-translate]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-translate]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[translate]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41266-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41266.py",
+        "elapsed_seconds": 6.883
+      },
+      {
+        "task_id": "vllm-41266",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41266.py::test_all_chunk_generators_are_advanced_and_cleaned_up": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-translate]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-translate]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[translate]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41266-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41266.py",
+        "elapsed_seconds": 6.857
+      },
+      {
+        "task_id": "vllm-41266",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41266.py::test_all_chunk_generators_are_advanced_and_cleaned_up": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-translate]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-translate]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[transcribe]": true,
+          "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[translate]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41266-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/eval_hidden/test_vllm_41266.py",
+        "elapsed_seconds": 6.874
+      }
+    ]
+  },
+  "vllm-41801": {
+    "base": {
+      "task_id": "vllm-41801",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_arguments_wrapper_repaired": false,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_input_wrapper_repaired": false,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_string_attr_true_preserves_literal_despite_schema": false,
+        "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_string_attr_true_preserves_literal_in_streaming": false,
+        "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls_arguments_wrapper": false
+      },
+      "p2p_total": 52,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41801-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_deepseekv32_tool_parser.py tests/tool_parsers/test_deepseekv4_tool_parser.py",
+      "elapsed_seconds": 12.04
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41801",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_arguments_wrapper_repaired": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_input_wrapper_repaired": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_string_attr_true_preserves_literal_despite_schema": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_string_attr_true_preserves_literal_in_streaming": true,
+          "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls_arguments_wrapper": true
+        },
+        "p2p_total": 52,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41801-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_deepseekv32_tool_parser.py tests/tool_parsers/test_deepseekv4_tool_parser.py",
+        "elapsed_seconds": 11.382
+      },
+      {
+        "task_id": "vllm-41801",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_arguments_wrapper_repaired": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_input_wrapper_repaired": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_string_attr_true_preserves_literal_despite_schema": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_string_attr_true_preserves_literal_in_streaming": true,
+          "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls_arguments_wrapper": true
+        },
+        "p2p_total": 52,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41801-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_deepseekv32_tool_parser.py tests/tool_parsers/test_deepseekv4_tool_parser.py",
+        "elapsed_seconds": 11.423
+      },
+      {
+        "task_id": "vllm-41801",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_arguments_wrapper_repaired": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_input_wrapper_repaired": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_string_attr_true_preserves_literal_despite_schema": true,
+          "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_string_attr_true_preserves_literal_in_streaming": true,
+          "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls_arguments_wrapper": true
+        },
+        "p2p_total": 52,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41801-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_deepseekv32_tool_parser.py tests/tool_parsers/test_deepseekv4_tool_parser.py",
+        "elapsed_seconds": 12.635
+      }
+    ]
+  },
+  "vllm-40749": {
+    "base": {
+      "task_id": "vllm-40749",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[2-True-0]": false
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40749-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k sample_tokens_ or select_common_block_size_ tests/v1/worker/test_gpu_model_runner.py",
+      "elapsed_seconds": 7.405
+    },
+    "gt": [
+      {
+        "task_id": "vllm-40749",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[2-True-0]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40749-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k sample_tokens_ or select_common_block_size_ tests/v1/worker/test_gpu_model_runner.py",
+        "elapsed_seconds": 6.765
+      },
+      {
+        "task_id": "vllm-40749",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[2-True-0]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40749-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k sample_tokens_ or select_common_block_size_ tests/v1/worker/test_gpu_model_runner.py",
+        "elapsed_seconds": 7.093
+      },
+      {
+        "task_id": "vllm-40749",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[2-True-0]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40749-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k sample_tokens_ or select_common_block_size_ tests/v1/worker/test_gpu_model_runner.py",
+        "elapsed_seconds": 7.358
+      }
+    ]
+  },
+  "vllm-41181": {
+    "base": {
+      "task_id": "vllm-41181",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41181.py::test_shared_fast_tokenizer_batches_match_sequential": false
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41181-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41181.py",
+      "elapsed_seconds": 5.316
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41181",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41181.py::test_shared_fast_tokenizer_batches_match_sequential": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41181-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41181.py",
+        "elapsed_seconds": 5.421
+      },
+      {
+        "task_id": "vllm-41181",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41181.py::test_shared_fast_tokenizer_batches_match_sequential": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41181-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41181.py",
+        "elapsed_seconds": 5.482
+      },
+      {
+        "task_id": "vllm-41181",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41181.py::test_shared_fast_tokenizer_batches_match_sequential": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41181-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41181.py",
+        "elapsed_seconds": 5.775
+      }
+    ]
+  },
+  "vllm-42162": {
+    "base": {
+      "task_id": "vllm-42162",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_matches_molmoweb_processor_tokens": false,
+        "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_respects_disabled_col_tokens": false
+      },
+      "p2p_total": 0,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42162-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/models/multimodal/processing/test_molmo2.py",
+      "elapsed_seconds": 8.213
+    },
+    "gt": [
+      {
+        "task_id": "vllm-42162",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_matches_molmoweb_processor_tokens": true,
+          "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_respects_disabled_col_tokens": true
+        },
+        "p2p_total": 0,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42162-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/models/multimodal/processing/test_molmo2.py",
+        "elapsed_seconds": 8.553
+      },
+      {
+        "task_id": "vllm-42162",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_matches_molmoweb_processor_tokens": true,
+          "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_respects_disabled_col_tokens": true
+        },
+        "p2p_total": 0,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42162-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/models/multimodal/processing/test_molmo2.py",
+        "elapsed_seconds": 7.014
+      },
+      {
+        "task_id": "vllm-42162",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_matches_molmoweb_processor_tokens": true,
+          "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_respects_disabled_col_tokens": true
+        },
+        "p2p_total": 0,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42162-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/models/multimodal/processing/test_molmo2.py",
+        "elapsed_seconds": 6.888
+      }
+    ]
+  },
+  "vllm-41355": {
+    "base": {
+      "task_id": "vllm-41355",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-annotations]": false,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-metadata]": false,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-empty-summary]": false,
+        "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-summary-content]": false
+      },
+      "p2p_total": 6,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41355-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41355.py",
+      "elapsed_seconds": 6.559
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41355",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-annotations]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-metadata]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-empty-summary]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-summary-content]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41355-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41355.py",
+        "elapsed_seconds": 5.383
+      },
+      {
+        "task_id": "vllm-41355",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-annotations]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-metadata]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-empty-summary]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-summary-content]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41355-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41355.py",
+        "elapsed_seconds": 5.069
+      },
+      {
+        "task_id": "vllm-41355",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-annotations]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-metadata]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-empty-summary]": true,
+          "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-summary-content]": true
+        },
+        "p2p_total": 6,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41355-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41355.py",
+        "elapsed_seconds": 4.998
+      }
+    ]
+  },
+  "vllm-41269": {
+    "base": {
+      "task_id": "vllm-41269",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[chat]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[completion]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[responses]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[chat]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[completion]": false,
+        "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[responses]": false
+      },
+      "p2p_total": 13,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41269-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41269.py",
+      "elapsed_seconds": 5.436
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41269",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[chat]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[completion]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[responses]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[chat]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[completion]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[responses]": true
+        },
+        "p2p_total": 13,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41269-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41269.py",
+        "elapsed_seconds": 5.249
+      },
+      {
+        "task_id": "vllm-41269",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[chat]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[completion]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[responses]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[chat]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[completion]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[responses]": true
+        },
+        "p2p_total": 13,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41269-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41269.py",
+        "elapsed_seconds": 5.297
+      },
+      {
+        "task_id": "vllm-41269",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[chat]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[completion]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[responses]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[chat]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[completion]": true,
+          "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[responses]": true
+        },
+        "p2p_total": 13,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41269-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41269.py",
+        "elapsed_seconds": 5.312
+      }
+    ]
+  },
+  "vllm-41681": {
+    "base": {
+      "task_id": "vllm-41681",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41681.py::test_orjson_float_endpoint_preserves_schema_and_uses_fast_representation[float32]": false
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41681-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41681.py",
+      "elapsed_seconds": 5.62
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41681",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41681.py::test_orjson_float_endpoint_preserves_schema_and_uses_fast_representation[float32]": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41681-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41681.py",
+        "elapsed_seconds": 5.479
+      },
+      {
+        "task_id": "vllm-41681",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41681.py::test_orjson_float_endpoint_preserves_schema_and_uses_fast_representation[float32]": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41681-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41681.py",
+        "elapsed_seconds": 5.597
+      },
+      {
+        "task_id": "vllm-41681",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41681.py::test_orjson_float_endpoint_preserves_schema_and_uses_fast_representation[float32]": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41681-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41681.py",
+        "elapsed_seconds": 5.572
+      }
+    ]
+  },
+  "vllm-41799": {
+    "base": {
+      "task_id": "vllm-41799",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-560]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-1120]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-140]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-560]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-70]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-overrides-nested]": false,
+        "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-560]": false
+      },
+      "p2p_total": 14,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41799-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41799.py",
+      "elapsed_seconds": 5.844
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41799",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-560]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-1120]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-140]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-560]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-70]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-overrides-nested]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-560]": true
+        },
+        "p2p_total": 14,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41799-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41799.py",
+        "elapsed_seconds": 6.086
+      },
+      {
+        "task_id": "vllm-41799",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-560]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-1120]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-140]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-560]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-70]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-overrides-nested]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-560]": true
+        },
+        "p2p_total": 14,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41799-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41799.py",
+        "elapsed_seconds": 5.794
+      },
+      {
+        "task_id": "vllm-41799",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-560]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-1120]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-140]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-560]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-70]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-overrides-nested]": true,
+          "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-560]": true
+        },
+        "p2p_total": 14,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41799-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41799.py",
+        "elapsed_seconds": 5.816
+      }
+    ]
+  },
+  "vllm-42244": {
+    "base": {
+      "task_id": "vllm-42244",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42244.py::test_language_weights_are_consumed_before_iterator_advances": false,
+        "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[vision-only-reused-buffer]": false,
+        "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[with-sound-reused-buffer]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42244-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42244.py",
+      "elapsed_seconds": 5.955
+    },
+    "gt": [
+      {
+        "task_id": "vllm-42244",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42244.py::test_language_weights_are_consumed_before_iterator_advances": true,
+          "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[vision-only-reused-buffer]": true,
+          "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[with-sound-reused-buffer]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42244-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42244.py",
+        "elapsed_seconds": 6.164
+      },
+      {
+        "task_id": "vllm-42244",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42244.py::test_language_weights_are_consumed_before_iterator_advances": true,
+          "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[vision-only-reused-buffer]": true,
+          "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[with-sound-reused-buffer]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42244-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42244.py",
+        "elapsed_seconds": 5.869
+      },
+      {
+        "task_id": "vllm-42244",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42244.py::test_language_weights_are_consumed_before_iterator_advances": true,
+          "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[vision-only-reused-buffer]": true,
+          "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[with-sound-reused-buffer]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42244-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42244.py",
+        "elapsed_seconds": 5.839
+      }
+    ]
+  },
+  "vllm-41932": {
+    "base": {
+      "task_id": "vllm-41932",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41932.py::test_greedy_dispatch_and_copyback[shared-sampler]": false,
+        "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[draft-probs-shared-sampler]": false,
+        "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[no-draft-probs-shared-sampler]": false,
+        "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[greedy]": false,
+        "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[random]": false
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41932-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41932.py",
+      "elapsed_seconds": 2.271
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41932",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41932.py::test_greedy_dispatch_and_copyback[shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[draft-probs-shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[no-draft-probs-shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[greedy]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[random]": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41932-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41932.py",
+        "elapsed_seconds": 2.121
+      },
+      {
+        "task_id": "vllm-41932",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41932.py::test_greedy_dispatch_and_copyback[shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[draft-probs-shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[no-draft-probs-shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[greedy]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[random]": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41932-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41932.py",
+        "elapsed_seconds": 2.116
+      },
+      {
+        "task_id": "vllm-41932",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41932.py::test_greedy_dispatch_and_copyback[shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[draft-probs-shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[no-draft-probs-shared-sampler]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[greedy]": true,
+          "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[random]": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41932-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41932.py",
+        "elapsed_seconds": 2.232
+      }
+    ]
+  },
+  "vllm-41806": {
+    "base": {
+      "task_id": "vllm-41806",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41806.py::test_actor_initialization_resolves_its_own_host[local-default]": false,
+        "tests/eval_hidden/test_vllm_41806.py::test_driver_host_not_forwarded_in_actor_runtime_environment": false,
+        "tests/eval_hidden/test_vllm_41806.py::test_host_does_not_affect_compile_factors": false,
+        "tests/eval_hidden/test_vllm_41806.py::test_worker_environment_excludes_host_but_keeps_ordinary_variables": false
+      },
+      "p2p_total": 1,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41806-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41806.py",
+      "elapsed_seconds": 5.065
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41806",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41806.py::test_actor_initialization_resolves_its_own_host[local-default]": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_driver_host_not_forwarded_in_actor_runtime_environment": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_host_does_not_affect_compile_factors": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_worker_environment_excludes_host_but_keeps_ordinary_variables": true
+        },
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41806-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41806.py",
+        "elapsed_seconds": 5.137
+      },
+      {
+        "task_id": "vllm-41806",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41806.py::test_actor_initialization_resolves_its_own_host[local-default]": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_driver_host_not_forwarded_in_actor_runtime_environment": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_host_does_not_affect_compile_factors": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_worker_environment_excludes_host_but_keeps_ordinary_variables": true
+        },
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41806-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41806.py",
+        "elapsed_seconds": 5.047
+      },
+      {
+        "task_id": "vllm-41806",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41806.py::test_actor_initialization_resolves_its_own_host[local-default]": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_driver_host_not_forwarded_in_actor_runtime_environment": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_host_does_not_affect_compile_factors": true,
+          "tests/eval_hidden/test_vllm_41806.py::test_worker_environment_excludes_host_but_keeps_ordinary_variables": true
+        },
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41806-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41806.py",
+        "elapsed_seconds": 4.978
+      }
+    ]
+  },
+  "vllm-39212": {
+    "base": {
+      "task_id": "vllm-39212",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[async]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[http]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[offline]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[worker]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[finish_weight_update]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[update_weights]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_double_start_rejected_without_reinitializing": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[async]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[http]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[offline]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[worker]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[finish_weight_update]": false,
+        "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[update_weights]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-39212-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39212.py",
+      "elapsed_seconds": 6.599
+    },
+    "gt": [
+      {
+        "task_id": "vllm-39212",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[async]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[http]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[offline]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[worker]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[finish_weight_update]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[update_weights]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_double_start_rejected_without_reinitializing": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[async]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[http]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[offline]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[worker]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[finish_weight_update]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[update_weights]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-39212-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39212.py",
+        "elapsed_seconds": 6.467
+      },
+      {
+        "task_id": "vllm-39212",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[async]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[http]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[offline]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[worker]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[finish_weight_update]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[update_weights]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_double_start_rejected_without_reinitializing": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[async]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[http]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[offline]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[worker]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[finish_weight_update]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[update_weights]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-39212-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39212.py",
+        "elapsed_seconds": 6.388
+      },
+      {
+        "task_id": "vllm-39212",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[async]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[http]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[offline]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[worker]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[finish_weight_update]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[update_weights]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_double_start_rejected_without_reinitializing": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[async]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[http]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[offline]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[worker]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[finish_weight_update]": true,
+          "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[update_weights]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-39212-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39212.py",
+        "elapsed_seconds": 7.783
+      }
+    ]
+  },
+  "vllm-42081": {
+    "base": {
+      "task_id": "vllm-42081",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[bf16_to_fp32]": false,
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp32_to_bf16]": false,
+        "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp64_to_fp32]": false
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42081-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42081.py",
+      "elapsed_seconds": 5.792
+    },
+    "gt": [
+      {
+        "task_id": "vllm-42081",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[bf16_to_fp32]": true,
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp32_to_bf16]": true,
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp64_to_fp32]": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42081-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42081.py",
+        "elapsed_seconds": 6.578
+      },
+      {
+        "task_id": "vllm-42081",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[bf16_to_fp32]": true,
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp32_to_bf16]": true,
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp64_to_fp32]": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42081-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42081.py",
+        "elapsed_seconds": 7.739
+      },
+      {
+        "task_id": "vllm-42081",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[bf16_to_fp32]": true,
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp32_to_bf16]": true,
+          "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp64_to_fp32]": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42081-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42081.py",
+        "elapsed_seconds": 8.204
+      }
+    ]
+  },
+  "vllm-39243": {
+    "base": {
+      "task_id": "vllm-39243",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-dotted_nested]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-empty_collections]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-escaping]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-nested_types]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parallel_calls]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parameterless]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-string]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-dotted_nested]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-empty_collections]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-escaping]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-nested_types]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parallel_calls]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parameterless]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-string]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_nonstreaming_surrounding_content": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_pathological_input_finishes_without_crashing": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_plain_content[False]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_plain_content[True]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[False]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[True]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-block]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-both]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-leading]": false,
+        "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-trailing]": false
+      },
+      "p2p_total": 1,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-39243-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39243.py",
+      "elapsed_seconds": 6.991
+    },
+    "gt": [
+      {
+        "task_id": "vllm-39243",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-dotted_nested]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-empty_collections]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-escaping]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-nested_types]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parallel_calls]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parameterless]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-string]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-dotted_nested]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-empty_collections]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-escaping]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-nested_types]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parallel_calls]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parameterless]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-string]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_nonstreaming_surrounding_content": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_pathological_input_finishes_without_crashing": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_plain_content[False]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_plain_content[True]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[False]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[True]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-block]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-both]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-leading]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-trailing]": true
+        },
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-39243-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39243.py",
+        "elapsed_seconds": 9.153
+      },
+      {
+        "task_id": "vllm-39243",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-dotted_nested]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-empty_collections]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-escaping]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-nested_types]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parallel_calls]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parameterless]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-string]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-dotted_nested]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-empty_collections]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-escaping]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-nested_types]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parallel_calls]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parameterless]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-string]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_nonstreaming_surrounding_content": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_pathological_input_finishes_without_crashing": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_plain_content[False]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_plain_content[True]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[False]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[True]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-block]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-both]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-leading]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-trailing]": true
+        },
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-39243-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39243.py",
+        "elapsed_seconds": 9.523
+      },
+      {
+        "task_id": "vllm-39243",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-dotted_nested]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-empty_collections]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-escaping]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-nested_types]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parallel_calls]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parameterless]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-string]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-dotted_nested]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-empty_collections]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-escaping]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-nested_types]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parallel_calls]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parameterless]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-string]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_nonstreaming_surrounding_content": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_pathological_input_finishes_without_crashing": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_plain_content[False]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_plain_content[True]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[False]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[True]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-block]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-both]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-leading]": true,
+          "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-trailing]": true
+        },
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-39243-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_39243.py",
+        "elapsed_seconds": 10.024
+      }
+    ]
+  },
+  "vllm-41423": {
+    "base": {
+      "task_id": "vllm-41423",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {},
+      "p2p_total": 1,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41423-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden --import-mode=importlib tests/eval_hidden/test_vllm_41423.py",
+      "elapsed_seconds": 58.376
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41423",
+        "T": 0.0,
+        "f2p_rate": 0.0,
+        "f2p": {},
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41423-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden --import-mode=importlib tests/eval_hidden/test_vllm_41423.py",
+        "elapsed_seconds": 48.587
+      },
+      {
+        "task_id": "vllm-41423",
+        "T": 0.0,
+        "f2p_rate": 0.0,
+        "f2p": {},
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41423-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden --import-mode=importlib tests/eval_hidden/test_vllm_41423.py",
+        "elapsed_seconds": 43.417
+      },
+      {
+        "task_id": "vllm-41423",
+        "T": 0.0,
+        "f2p_rate": 0.0,
+        "f2p": {},
+        "p2p_total": 1,
+        "p2p_regressions": [],
+        "pytest_returncode": 1,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41423-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden --import-mode=importlib tests/eval_hidden/test_vllm_41423.py",
+        "elapsed_seconds": 46.116
+      }
+    ]
+  },
+  "vllm-42026": {
+    "base": {
+      "task_id": "vllm-42026",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_preserved_in_arg_values": false,
+        "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_whitespace_preserved_in_arg_values": false
+      },
+      "p2p_total": 60,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42026-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_glm47_moe_tool_parser.py tests/tool_parsers/test_glm4_moe_tool_parser.py",
+      "elapsed_seconds": 21.388
+    },
+    "gt": [
+      {
+        "task_id": "vllm-42026",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_preserved_in_arg_values": true,
+          "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_whitespace_preserved_in_arg_values": true
+        },
+        "p2p_total": 60,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42026-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_glm47_moe_tool_parser.py tests/tool_parsers/test_glm4_moe_tool_parser.py",
+        "elapsed_seconds": 14.919
+      },
+      {
+        "task_id": "vllm-42026",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_preserved_in_arg_values": true,
+          "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_whitespace_preserved_in_arg_values": true
+        },
+        "p2p_total": 60,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42026-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_glm47_moe_tool_parser.py tests/tool_parsers/test_glm4_moe_tool_parser.py",
+        "elapsed_seconds": 13.339
+      },
+      {
+        "task_id": "vllm-42026",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_preserved_in_arg_values": true,
+          "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_whitespace_preserved_in_arg_values": true
+        },
+        "p2p_total": 60,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42026-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no tests/tool_parsers/test_glm47_moe_tool_parser.py tests/tool_parsers/test_glm4_moe_tool_parser.py",
+        "elapsed_seconds": 14.846
+      }
+    ]
+  },
+  "vllm-41499": {
+    "base": {
+      "task_id": "vllm-41499",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41499.py::test_cli_options_reach_load_config": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_block_size]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_num_threads]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_block_size]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_num_threads]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[1-1024]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[2-4096]": false,
+        "tests/eval_hidden/test_vllm_41499.py::test_public_defaults": false
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41499-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41499.py",
+      "elapsed_seconds": 6.856
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41499",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41499.py::test_cli_options_reach_load_config": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_block_size]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_num_threads]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_block_size]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_num_threads]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[1-1024]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[2-4096]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_public_defaults": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41499-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41499.py",
+        "elapsed_seconds": 7.479
+      },
+      {
+        "task_id": "vllm-41499",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41499.py::test_cli_options_reach_load_config": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_block_size]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_num_threads]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_block_size]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_num_threads]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[1-1024]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[2-4096]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_public_defaults": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41499-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41499.py",
+        "elapsed_seconds": 6.633
+      },
+      {
+        "task_id": "vllm-41499",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41499.py::test_cli_options_reach_load_config": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_block_size]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_num_threads]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_block_size]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_num_threads]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[1-1024]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[2-4096]": true,
+          "tests/eval_hidden/test_vllm_41499.py::test_public_defaults": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41499-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41499.py",
+        "elapsed_seconds": 6.297
+      }
+    ]
+  },
+  "vllm-41965": {
+    "base": {
+      "task_id": "vllm-41965",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/quantization/test_compressed_tensors.py::test_find_matched_target_returns_none_on_no_match": false,
+        "tests/quantization/test_compressed_tensors.py::test_get_scheme_dict_returns_none_on_no_match": false
+      },
+      "p2p_total": 3,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41965-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k find_matched_target_returns_none or get_scheme_dict_returns_none or lm_head tests/quantization/test_compressed_tensors.py",
+      "elapsed_seconds": 7.523
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41965",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/quantization/test_compressed_tensors.py::test_find_matched_target_returns_none_on_no_match": true,
+          "tests/quantization/test_compressed_tensors.py::test_get_scheme_dict_returns_none_on_no_match": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41965-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k find_matched_target_returns_none or get_scheme_dict_returns_none or lm_head tests/quantization/test_compressed_tensors.py",
+        "elapsed_seconds": 7.608
+      },
+      {
+        "task_id": "vllm-41965",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/quantization/test_compressed_tensors.py::test_find_matched_target_returns_none_on_no_match": true,
+          "tests/quantization/test_compressed_tensors.py::test_get_scheme_dict_returns_none_on_no_match": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41965-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k find_matched_target_returns_none or get_scheme_dict_returns_none or lm_head tests/quantization/test_compressed_tensors.py",
+        "elapsed_seconds": 7.55
+      },
+      {
+        "task_id": "vllm-41965",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/quantization/test_compressed_tensors.py::test_find_matched_target_returns_none_on_no_match": true,
+          "tests/quantization/test_compressed_tensors.py::test_get_scheme_dict_returns_none_on_no_match": true
+        },
+        "p2p_total": 3,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41965-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no -k find_matched_target_returns_none or get_scheme_dict_returns_none or lm_head tests/quantization/test_compressed_tensors.py",
+        "elapsed_seconds": 7.415
+      }
+    ]
+  },
+  "vllm-41916": {
+    "base": {
+      "task_id": "vllm-41916",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41916.py::test_labels_do_not_change_counter_identity": false,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[created]": false,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[gauge]": false,
+        "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[sum]": false
+      },
+      "p2p_total": 2,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41916-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41916.py",
+      "elapsed_seconds": 5.987
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41916",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41916.py::test_labels_do_not_change_counter_identity": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[created]": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[gauge]": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[sum]": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41916-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41916.py",
+        "elapsed_seconds": 5.946
+      },
+      {
+        "task_id": "vllm-41916",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41916.py::test_labels_do_not_change_counter_identity": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[created]": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[gauge]": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[sum]": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41916-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41916.py",
+        "elapsed_seconds": 6.07
+      },
+      {
+        "task_id": "vllm-41916",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41916.py::test_labels_do_not_change_counter_identity": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[created]": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[gauge]": true,
+          "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[sum]": true
+        },
+        "p2p_total": 2,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41916-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41916.py",
+        "elapsed_seconds": 6.292
+      }
+    ]
+  },
+  "vllm-42188": {
+    "base": {
+      "task_id": "vllm-42188",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_42188.py::test_legacy_unresolvable_name[null_name]": false,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[missing_id]": false,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[null_id_and_name]": false,
+        "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[unmatched_id]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42188-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42188.py",
+      "elapsed_seconds": 0.431
+    },
+    "gt": [
+      {
+        "task_id": "vllm-42188",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42188.py::test_legacy_unresolvable_name[null_name]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[missing_id]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[null_id_and_name]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[unmatched_id]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42188-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42188.py",
+        "elapsed_seconds": 0.338
+      },
+      {
+        "task_id": "vllm-42188",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42188.py::test_legacy_unresolvable_name[null_name]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[missing_id]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[null_id_and_name]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[unmatched_id]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42188-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42188.py",
+        "elapsed_seconds": 0.374
+      },
+      {
+        "task_id": "vllm-42188",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_42188.py::test_legacy_unresolvable_name[null_name]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[missing_id]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[null_id_and_name]": true,
+          "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[unmatched_id]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-42188-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_42188.py",
+        "elapsed_seconds": 0.36
+      }
+    ]
+  },
+  "vllm-40891": {
+    "base": {
+      "task_id": "vllm-40891",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-async_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-sync_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-async_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-sync_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_initialization_creates_no_output_thread_pool[async_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[async_scheduler]": false,
+        "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[sync_scheduler]": false
+      },
+      "p2p_total": 5,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40891-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40891.py",
+      "elapsed_seconds": 6.533
+    },
+    "gt": [
+      {
+        "task_id": "vllm-40891",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-sync_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-sync_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_initialization_creates_no_output_thread_pool[async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[sync_scheduler]": true
+        },
+        "p2p_total": 5,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40891-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40891.py",
+        "elapsed_seconds": 5.553
+      },
+      {
+        "task_id": "vllm-40891",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-sync_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-sync_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_initialization_creates_no_output_thread_pool[async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[sync_scheduler]": true
+        },
+        "p2p_total": 5,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40891-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40891.py",
+        "elapsed_seconds": 5.245
+      },
+      {
+        "task_id": "vllm-40891",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-sync_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-sync_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_initialization_creates_no_output_thread_pool[async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[async_scheduler]": true,
+          "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[sync_scheduler]": true
+        },
+        "p2p_total": 5,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40891-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40891.py",
+        "elapsed_seconds": 5.31
+      }
+    ]
+  },
+  "vllm-40708": {
+    "base": {
+      "task_id": "vllm-40708",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-1]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-0]": false,
+        "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-1]": false
+      },
+      "p2p_total": 31,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40708-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40708.py",
+      "elapsed_seconds": 6.789
+    },
+    "gt": [
+      {
+        "task_id": "vllm-40708",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-1]": true
+        },
+        "p2p_total": 31,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40708-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40708.py",
+        "elapsed_seconds": 6.422
+      },
+      {
+        "task_id": "vllm-40708",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-1]": true
+        },
+        "p2p_total": 31,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40708-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40708.py",
+        "elapsed_seconds": 6.606
+      },
+      {
+        "task_id": "vllm-40708",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-1]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-0]": true,
+          "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-1]": true
+        },
+        "p2p_total": 31,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-40708-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_40708.py",
+        "elapsed_seconds": 6.725
+      }
+    ]
+  },
+  "vllm-41237": {
+    "base": {
+      "task_id": "vllm-41237",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-MooncakeConnectorV1]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-NixlConnector]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-SomeOOTConnector]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-MooncakeConnectorV1]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-NixlConnector]": false,
+        "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-SomeOOTConnector]": false
+      },
+      "p2p_total": 5,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41237-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41237.py",
+      "elapsed_seconds": 5.957
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41237",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-MooncakeConnectorV1]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-NixlConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-SomeOOTConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-MooncakeConnectorV1]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-NixlConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-SomeOOTConnector]": true
+        },
+        "p2p_total": 5,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41237-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41237.py",
+        "elapsed_seconds": 5.791
+      },
+      {
+        "task_id": "vllm-41237",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-MooncakeConnectorV1]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-NixlConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-SomeOOTConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-MooncakeConnectorV1]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-NixlConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-SomeOOTConnector]": true
+        },
+        "p2p_total": 5,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41237-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41237.py",
+        "elapsed_seconds": 5.976
+      },
+      {
+        "task_id": "vllm-41237",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-MooncakeConnectorV1]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-NixlConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-SomeOOTConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-MooncakeConnectorV1]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-NixlConnector]": true,
+          "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-SomeOOTConnector]": true
+        },
+        "p2p_total": 5,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41237-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41237.py",
+        "elapsed_seconds": 6.095
+      }
+    ]
+  },
+  "vllm-41905": {
+    "base": {
+      "task_id": "vllm-41905",
+      "T": 0.0,
+      "f2p_rate": 0.0,
+      "f2p": {
+        "tests/eval_hidden/test_vllm_41905.py::test_constructed_multitoken_model_can_chain_predictions": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[2]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[3]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[8]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-1]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-2]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-5]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-1]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-2]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-5]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[1]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[2]": false,
+        "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[5]": false
+      },
+      "p2p_total": 4,
+      "p2p_regressions": [],
+      "pytest_returncode": 1,
+      "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41905-base/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41905.py",
+      "elapsed_seconds": 6.632
+    },
+    "gt": [
+      {
+        "task_id": "vllm-41905",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41905.py::test_constructed_multitoken_model_can_chain_predictions": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[3]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[8]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-5]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-5]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[5]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41905-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41905.py",
+        "elapsed_seconds": 9.391
+      },
+      {
+        "task_id": "vllm-41905",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41905.py::test_constructed_multitoken_model_can_chain_predictions": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[3]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[8]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-5]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-5]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[5]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41905-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41905.py",
+        "elapsed_seconds": 8.373
+      },
+      {
+        "task_id": "vllm-41905",
+        "T": 1.0,
+        "f2p_rate": 1.0,
+        "f2p": {
+          "tests/eval_hidden/test_vllm_41905.py::test_constructed_multitoken_model_can_chain_predictions": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[3]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[8]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-5]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-5]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[1]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[2]": true,
+          "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[5]": true
+        },
+        "p2p_total": 4,
+        "p2p_regressions": [],
+        "pytest_returncode": 0,
+        "command": "/home/ubuntu/.devin-files/vllm-eval/step3/vllm-41905-gt/.venv/bin/python -m pytest -p no:cacheprovider -p score_outcomes_plugin -rA -q --color=no --confcutdir=tests/eval_hidden tests/eval_hidden/test_vllm_41905.py",
+        "elapsed_seconds": 9.43
+      }
+    ]
+  }
+}

@@ -1,0 +1,1124 @@
+[
+  {
+    "task_id": "vllm-41991",
+    "commit_sha": "dbd86a67e3ee7ba95ce90292bb21006b9761faee",
+    "overlay": [
+      {
+        "src": "gt:tests/tool_parsers/test_gemma4_tool_parser.py",
+        "dst": "tests/tool_parsers/test_gemma4_tool_parser.py"
+      },
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41991/test_vllm_41991.py",
+        "dst": "tests/eval_hidden/test_vllm_41991.py"
+      }
+    ],
+    "pytest_args": [
+      "-k",
+      "not test_stray_closing_bracket"
+    ],
+    "extra_test_files": [],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41991.py::test_malformed_arguments_terminate_without_prescribing_recovery",
+      "tests/eval_hidden/test_vllm_41991.py::test_malformed_array_terminates_without_prescribing_recovery",
+      "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a[b]",
+      "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[a]b]",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_malformed_partial_array",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_string_element_with_closing_bracket"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[[a]]",
+      "tests/eval_hidden/test_vllm_41991.py::test_quoted_brackets_are_literal[plain]",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_dotted_function_name",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_hyphenated_function_name",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_incomplete_tool_call",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_multiple_arguments",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_multiple_tool_calls",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_nested_arguments",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_no_arguments",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_no_tool_calls",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_single_tool_call",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_text_before_tool_call",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestExtractToolCalls::test_tool_call_with_number_and_boolean",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_array_of_strings",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_boolean_false",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_boolean_true",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_empty_string",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_empty_value",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_empty_value_after_other_keys_partial_withheld",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_empty_value_partial_withheld",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_float_value",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_integer_value",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_mixed_types",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_multiple_string_values",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_nested_object",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_null_value",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_single_string_value",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_string_value_with_comma",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_unterminated_string",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Args::test_whitespace_only",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_bare_values",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_empty_array",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestParseGemma4Array::test_string_array",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_basic_streaming_single_tool",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_boolean_split_across_chunks",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_does_not_duplicate_plain_text_after_tool_call",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_empty_args",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_false_split_across_chunks",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_html_argument_does_not_duplicate_tag_prefixes",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_multi_arg",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_name_no_call_prefix",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_no_extra_brace",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_no_unquoted_keys",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_number_split_across_chunks",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_numeric_args",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_split_delimiter_no_invalid_json",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_text_before_tool_call",
+      "tests/tool_parsers/test_gemma4_tool_parser.py::TestStreamingExtraction::test_streaming_trailing_bare_bool_not_duplicated"
+    ],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-40951",
+    "commit_sha": "0d382ecde8c6771fe07854eaad3af73c1353e031",
+    "overlay": [
+      {
+        "src": "gt:tests/engine/test_arg_utils.py",
+        "dst": "tests/engine/test_arg_utils.py"
+      }
+    ],
+    "f2p": [
+      "tests/engine/test_arg_utils.py::test_get_kwargs",
+      "tests/engine/test_arg_utils.py::test_hf_token_get_kwargs"
+    ],
+    "p2p": [
+      "tests/engine/test_arg_utils.py::test_attention_config",
+      "tests/engine/test_arg_utils.py::test_compilation_config",
+      "tests/engine/test_arg_utils.py::test_composite_arg_parser[None-None-mm-processor-kwargs]",
+      "tests/engine/test_arg_utils.py::test_composite_arg_parser[{\"foo\": {\"bar\": \"baz\"}}-expected3-mm-processor-kwargs]",
+      "tests/engine/test_arg_utils.py::test_composite_arg_parser[{\"num_crops\": 4}-expected2-mm-processor-kwargs]",
+      "tests/engine/test_arg_utils.py::test_composite_arg_parser[{}-expected1-mm-processor-kwargs]",
+      "tests/engine/test_arg_utils.py::test_contains_type[type_hints0-int-True]",
+      "tests/engine/test_arg_utils.py::test_contains_type[type_hints1-int-True]",
+      "tests/engine/test_arg_utils.py::test_contains_type[type_hints2-int-True]",
+      "tests/engine/test_arg_utils.py::test_contains_type[type_hints3-int-True]",
+      "tests/engine/test_arg_utils.py::test_contains_type[type_hints4-float-False]",
+      "tests/engine/test_arg_utils.py::test_contains_type[type_hints5-float-False]",
+      "tests/engine/test_arg_utils.py::test_contains_type[type_hints6-Literal-True]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"a\": 1k, \"b\": 2m}-{\"a\": 1000, \"b\": 2000000}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"model_name\": \"foo_bar\"}-{\"model_name\": \"foo_bar\"}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"my_key\": 80g}-{\"my_key\": 80000000000}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"name\": \"80g\"}-{\"name\": \"80g\"}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"outer\": {\"inner\": 10g}}-{\"outer\": {\"inner\": 10000000000}}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"x\": 1.5g}-{\"x\": 1500000000}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"x\": 1G}-{\"x\": 1073741824}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"x\": 1K}-{\"x\": 1024}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"x\": 1k}-{\"x\": 1000}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"x\": 2t}-{\"x\": 2000000000000}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"x\": 42}-{\"x\": 42}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"x\": 5m}-{\"x\": 5000000}]",
+      "tests/engine/test_arg_utils.py::test_expand_json_human_readable_numbers[{\"x\": 80g}-{\"x\": 80000000000}]",
+      "tests/engine/test_arg_utils.py::test_get_type[type_hints0-int-int]",
+      "tests/engine/test_arg_utils.py::test_get_type[type_hints1-str-None]",
+      "tests/engine/test_arg_utils.py::test_get_type[type_hints2-Literal-Literal]",
+      "tests/engine/test_arg_utils.py::test_get_type_hints[Annotated]",
+      "tests/engine/test_arg_utils.py::test_get_type_hints[Annotated_or_None]",
+      "tests/engine/test_arg_utils.py::test_get_type_hints[or_None]",
+      "tests/engine/test_arg_utils.py::test_get_type_hints[or_None_Annotated]",
+      "tests/engine/test_arg_utils.py::test_hf_token_cli_arg[cli_args0-None]",
+      "tests/engine/test_arg_utils.py::test_hf_token_cli_arg[cli_args1-True]",
+      "tests/engine/test_arg_utils.py::test_hf_token_cli_arg[cli_args2-hf_secret]",
+      "tests/engine/test_arg_utils.py::test_hf_token_cli_arg[cli_args3-None]",
+      "tests/engine/test_arg_utils.py::test_human_readable_model_len",
+      "tests/engine/test_arg_utils.py::test_ir_op_priority",
+      "tests/engine/test_arg_utils.py::test_is_not_builtin[DummyConfig-True]",
+      "tests/engine/test_arg_utils.py::test_is_not_builtin[int-False]",
+      "tests/engine/test_arg_utils.py::test_is_type[Literal-Literal-True]",
+      "tests/engine/test_arg_utils.py::test_is_type[int-float-False]",
+      "tests/engine/test_arg_utils.py::test_is_type[int-int-True]",
+      "tests/engine/test_arg_utils.py::test_is_type[list-list-True]",
+      "tests/engine/test_arg_utils.py::test_is_type[list-tuple-False]",
+      "tests/engine/test_arg_utils.py::test_literal_to_kwargs[type_hints0-expected0]",
+      "tests/engine/test_arg_utils.py::test_literal_to_kwargs[type_hints1-expected1]",
+      "tests/engine/test_arg_utils.py::test_literal_to_kwargs[type_hints2-Exception]",
+      "tests/engine/test_arg_utils.py::test_media_io_kwargs_parser[None-expected0]",
+      "tests/engine/test_arg_utils.py::test_media_io_kwargs_parser[{\"video\": {\"num_frames\": 123, \"fps\": 1.0, \"foo\": \"bar\"}, \"image\": {\"foo\": \"bar\"} }-expected2]",
+      "tests/engine/test_arg_utils.py::test_media_io_kwargs_parser[{\"video\": {\"num_frames\": 123} }-expected1]",
+      "tests/engine/test_arg_utils.py::test_mode_parser[args0-0]",
+      "tests/engine/test_arg_utils.py::test_mode_parser[args1-1]",
+      "tests/engine/test_arg_utils.py::test_mode_parser[args2-2]",
+      "tests/engine/test_arg_utils.py::test_mode_parser[args3-3]",
+      "tests/engine/test_arg_utils.py::test_numa_bind_args",
+      "tests/engine/test_arg_utils.py::test_optimization_level[args0-1]",
+      "tests/engine/test_arg_utils.py::test_optimization_level[args1-2]",
+      "tests/engine/test_arg_utils.py::test_optimization_level[args2-3]",
+      "tests/engine/test_arg_utils.py::test_optimization_level[args3-0]",
+      "tests/engine/test_arg_utils.py::test_optimization_level[args4-1]",
+      "tests/engine/test_arg_utils.py::test_optimization_level[args5-2]",
+      "tests/engine/test_arg_utils.py::test_optimization_level[args6-3]",
+      "tests/engine/test_arg_utils.py::test_optional_type",
+      "tests/engine/test_arg_utils.py::test_parse_type[float-3.14-3.14]",
+      "tests/engine/test_arg_utils.py::test_parse_type[int-42-42]",
+      "tests/engine/test_arg_utils.py::test_parse_type[loads-{\"foo\":1,\"bar\":2}-expected3]",
+      "tests/engine/test_arg_utils.py::test_parse_type[str-Hello World!-Hello World!]",
+      "tests/engine/test_arg_utils.py::test_prefix_cache_default"
+    ],
+    "pytest_args": [],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41795",
+    "commit_sha": "f39bcf1e30693f2e620e3a2ec732c5f7192408fb",
+    "overlay": [
+      {
+        "src": "gt:tests/v1/kv_offload/cpu/test_manager.py",
+        "dst": "tests/v1/kv_offload/cpu/test_manager.py"
+      }
+    ],
+    "f2p": [
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_basic",
+      "tests/v1/kv_offload/cpu/test_manager.py::test_cpu_manager"
+    ],
+    "p2p": [
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_adaptive_target",
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_eviction_with_load",
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_failed_store",
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_full_scenario",
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_ghost_list_bounds",
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_t1_t2_eviction_policy",
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_t1_to_t2_promotion",
+      "tests/v1/kv_offload/cpu/test_manager.py::TestARCPolicy::test_touch_ordering",
+      "tests/v1/kv_offload/cpu/test_manager.py::test_already_stored_block_not_evicted_during_prepare_store[arc]",
+      "tests/v1/kv_offload/cpu/test_manager.py::test_already_stored_block_not_evicted_during_prepare_store[lru]",
+      "tests/v1/kv_offload/cpu/test_manager.py::test_filter_reused_manager"
+    ],
+    "pytest_args": [],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41730",
+    "commit_sha": "c6235ed1803e31bafedd90d53766e5705c570780",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41730/test_vllm_41730.py",
+        "dst": "tests/eval_hidden/test_vllm_41730.py"
+      }
+    ],
+    "pytest_args": [],
+    "extra_test_files": [],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-pre_v11-characters]",
+      "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-characters]",
+      "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-fragments]",
+      "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[independent_tools-v11-one_chunk]",
+      "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-pre_v11-characters]",
+      "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-characters]",
+      "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-fragments]",
+      "tests/eval_hidden/test_vllm_41730.py::test_streaming_tool_state_is_usable_by_serving[one_tool-v11-one_chunk]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41730.py::test_nonstreaming_functions_remain_compatible[pre_v11]",
+      "tests/eval_hidden/test_vllm_41730.py::test_nonstreaming_functions_remain_compatible[v11]",
+      "tests/eval_hidden/test_vllm_41730.py::test_ordinary_text_has_no_tool_state[pre_v11]",
+      "tests/eval_hidden/test_vllm_41730.py::test_ordinary_text_has_no_tool_state[v11]",
+      "tests/eval_hidden/test_vllm_41730.py::test_partial_tool_name_is_safe[pre_v11]",
+      "tests/eval_hidden/test_vllm_41730.py::test_partial_tool_name_is_safe[v11]"
+    ],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-40726",
+    "commit_sha": "213f10bfdd43422d2936a8f5e218000050572678",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-40726/test_vllm_40726.py",
+        "dst": "tests/eval_hidden/test_vllm_40726.py"
+      }
+    ],
+    "pytest_args": [],
+    "extra_test_files": [],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-allocation]",
+      "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-conversion]",
+      "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-repeated_objects]",
+      "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[fresh-split_submodules]",
+      "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-allocation]",
+      "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-conversion]",
+      "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-repeated_objects]",
+      "tests/eval_hidden/test_vllm_40726.py::test_generated_execution_matches_eager[serialized-split_submodules]",
+      "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[False]",
+      "tests/eval_hidden/test_vllm_40726.py::test_nested_nonprimitive_graph_outputs[True]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_40726.py::test_legacy_artifact_without_special_objects_still_loads",
+      "tests/eval_hidden/test_vllm_40726.py::test_non_graphmodule_child_keeps_callable_behavior",
+      "tests/eval_hidden/test_vllm_40726.py::test_primitive_graph_still_executes[False]",
+      "tests/eval_hidden/test_vllm_40726.py::test_primitive_graph_still_executes[True]"
+    ],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41266",
+    "commit_sha": "a5d0a5afba521e875454a9cd920734bef73d404f",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41266/test_vllm_41266.py",
+        "dst": "tests/eval_hidden/test_vllm_41266.py"
+      }
+    ],
+    "pytest_args": [],
+    "extra_test_files": [],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41266.py::test_all_chunk_generators_are_advanced_and_cleaned_up",
+      "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-transcribe]",
+      "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[multiple_chunks-translate]",
+      "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-transcribe]",
+      "tests/eval_hidden/test_vllm_41266.py::test_cancellation_aborts_exact_submitted_ids_and_propagates[single_chunk-translate]",
+      "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[transcribe]",
+      "tests/eval_hidden/test_vllm_41266.py::test_language_detection_outer_cancellation_aborts_submitted_id[translate]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41266.py::test_streaming_still_delegates_without_collecting_or_aborting[transcribe]",
+      "tests/eval_hidden/test_vllm_41266.py::test_streaming_still_delegates_without_collecting_or_aborting[translate]",
+      "tests/eval_hidden/test_vllm_41266.py::test_success_preserves_order_and_never_aborts[1-transcribe]",
+      "tests/eval_hidden/test_vllm_41266.py::test_success_preserves_order_and_never_aborts[1-translate]",
+      "tests/eval_hidden/test_vllm_41266.py::test_success_preserves_order_and_never_aborts[3-transcribe]",
+      "tests/eval_hidden/test_vllm_41266.py::test_success_preserves_order_and_never_aborts[3-translate]"
+    ],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41801",
+    "commit_sha": "95582868efd4db0b120e3640bbc61dcfce20d59f",
+    "overlay": [
+      {
+        "src": "gt:tests/tool_parsers/test_deepseekv32_tool_parser.py",
+        "dst": "tests/tool_parsers/test_deepseekv32_tool_parser.py"
+      },
+      {
+        "src": "gt:tests/tool_parsers/test_deepseekv4_tool_parser.py",
+        "dst": "tests/tool_parsers/test_deepseekv4_tool_parser.py"
+      }
+    ],
+    "f2p": [
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_arguments_wrapper_repaired",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_input_wrapper_repaired",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_string_attr_true_preserves_literal_despite_schema",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_string_attr_true_preserves_literal_in_streaming",
+      "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls_arguments_wrapper"
+    ],
+    "p2p": [
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_array_valid_json",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_boolean_false",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_boolean_true",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_integer_invalid_falls_back_to_str",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_integer_valid",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_null",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_number_float",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_number_whole_returns_int",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_object_invalid_json_falls_back",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_object_valid_json",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_string",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestConvertParamValue::test_unknown_type_tries_json_then_string",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestDelimiterPreservation::test_delimiter_preserved_fast_detokenization",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestDelimiterPreservation::test_tool_detection_skip_special_tokens_false",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_content_before_tool_call",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_multiple_tools",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_no_content_prefix_returns_none",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_no_tool_call",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_single_tool_no_params",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_single_tool_with_params",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_string_attr_false_allows_schema_conversion",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCalls::test_type_conversion_in_non_streaming",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_content_before_tool_call_streaming",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_content_before_tool_chunked",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_empty_arguments_streaming",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_eos_after_tool_calls",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_false_partial_marker_emitted",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_multiple_tools_chunked",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_multiple_tools_streaming",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_no_emission_while_incomplete",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_no_marker_leak_all_split_points",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_no_marker_leak_char_by_char",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_no_marker_leak_chunked",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_no_marker_leak_with_prefix_chunked",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_plain_content_no_tool",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_single_tool_chunked_stream_interval",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_single_tool_streaming",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_state_reset_on_new_stream",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_streaming_matches_non_streaming",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_tool_name_emitted",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_type_conversion_in_streaming",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::TestExtractToolCallsStreaming::test_unique_tool_call_ids",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_checked_helper",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_edge_cases",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_multi_typed_values",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_single_types",
+      "tests/tool_parsers/test_deepseekv32_tool_parser.py::test_convert_param_value_stricter_type_checking",
+      "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_extract_tool_calls",
+      "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_function_calls_block_is_not_accepted",
+      "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_get_vllm_registry_structural_tag_returns_structural_tag",
+      "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_registered",
+      "tests/tool_parsers/test_deepseekv4_tool_parser.py::test_streaming_extracts_complete_invokes"
+    ],
+    "pytest_args": [],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-40749",
+    "commit_sha": "b53c507bc91f87e28b03e9b54bbff7c76e97d58b",
+    "overlay": [
+      {
+        "src": "gt:tests/v1/worker/test_gpu_model_runner.py",
+        "dst": "tests/v1/worker/test_gpu_model_runner.py"
+      }
+    ],
+    "f2p": [
+      "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[2-True-0]"
+    ],
+    "p2p": [
+      "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[1-True-0]",
+      "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_receives_pp_sampled_ids_only_on_non_last_rank[2-False-1]",
+      "tests/v1/worker/test_gpu_model_runner.py::test_sample_tokens_skips_pp_group_lookup_without_async_scheduling",
+      "tests/v1/worker/test_gpu_model_runner.py::test_select_common_block_size_no_valid_option",
+      "tests/v1/worker/test_gpu_model_runner.py::test_select_common_block_size_prefers_manager_block_size",
+      "tests/v1/worker/test_gpu_model_runner.py::test_select_common_block_size_uses_largest_shared_int"
+    ],
+    "pytest_args": [
+      "-k",
+      "sample_tokens_ or select_common_block_size_"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41181",
+    "commit_sha": "20dcd984f9a49b8dc69c400486eed50953cb16cf",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41181/test_vllm_41181.py",
+        "dst": "tests/eval_hidden/test_vllm_41181.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41181.py::test_shared_fast_tokenizer_batches_match_sequential"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41181.py::test_encode_decode_and_chat_remain_compatible",
+      "tests/eval_hidden/test_vllm_41181.py::test_slow_tokenizer_behavior_is_preserved"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": true,
+    "exclusion_reason": "GT fails task-required existing tokenizer serialization compatibility: pickle.loads(pickle.dumps(renderer.get_tokenizer())) returns None, causing AttributeError on encode. BASE passes the same real public-entrypoint round-trip. The GT new reducer calls a pool initializer that has no return on the fast-tokenizer path. Preserve this behavioral compatibility test rather than deleting it to force a clean GT. Not an import/fixture problem or scorer defect."
+  },
+  {
+    "task_id": "vllm-42162",
+    "commit_sha": "879a8c318032ed32716e5e0b10af355a4ddbced2",
+    "overlay": [
+      {
+        "src": "gt:tests/models/multimodal/processing/test_molmo2.py",
+        "dst": "tests/models/multimodal/processing/test_molmo2.py"
+      }
+    ],
+    "f2p": [
+      "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_matches_molmoweb_processor_tokens",
+      "tests/models/multimodal/processing/test_molmo2.py::test_build_flat_image_bool_length_respects_disabled_col_tokens"
+    ],
+    "p2p": [],
+    "pytest_args": [],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41355",
+    "commit_sha": "c7aa186d67b6f051680831418e957c67f34ba7a2",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41355/test_vllm_41355.py",
+        "dst": "tests/eval_hidden/test_vllm_41355.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-annotations]",
+      "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[assistant-missing-metadata]",
+      "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-empty-summary]",
+      "tests/eval_hidden/test_vllm_41355.py::test_output_items_can_be_resubmitted[reasoning-summary-content]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41355.py::test_explicit_metadata_is_preserved",
+      "tests/eval_hidden/test_vllm_41355.py::test_function_call_and_ordinary_text_remain_valid",
+      "tests/eval_hidden/test_vllm_41355.py::test_substantive_invalid_content_still_rejected[missing-call-id]",
+      "tests/eval_hidden/test_vllm_41355.py::test_substantive_invalid_content_still_rejected[missing-output-text]",
+      "tests/eval_hidden/test_vllm_41355.py::test_substantive_invalid_content_still_rejected[missing-summary-text]",
+      "tests/eval_hidden/test_vllm_41355.py::test_substantive_invalid_content_still_rejected[unknown-item-kind]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41269",
+    "commit_sha": "3f5bd482f5c1a5dbdffbbf68d624e20bb7032013",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41269/test_vllm_41269.py",
+        "dst": "tests/eval_hidden/test_vllm_41269.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[chat]",
+      "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[completion]",
+      "tests/eval_hidden/test_vllm_41269.py::test_original_validation_exception_survives_cleanup[responses]",
+      "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[chat]",
+      "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[completion]",
+      "tests/eval_hidden/test_vllm_41269.py::test_rejected_remote_prefill_notifies_with_original_identity[responses]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41269.py::test_cleanup_failure_does_not_replace_client_error[chat]",
+      "tests/eval_hidden/test_vllm_41269.py::test_cleanup_failure_does_not_replace_client_error[completion]",
+      "tests/eval_hidden/test_vllm_41269.py::test_cleanup_failure_does_not_replace_client_error[responses]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[local-prefill-chat]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[local-prefill-completion]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[local-prefill-responses]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[no-connector-chat]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[no-connector-completion]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[no-connector-responses]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[no-metadata-chat]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[no-metadata-completion]",
+      "tests/eval_hidden/test_vllm_41269.py::test_ordinary_rejections_do_not_notify[no-metadata-responses]",
+      "tests/eval_hidden/test_vllm_41269.py::test_successful_completion_admission_does_not_notify"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41681",
+    "commit_sha": "cd58e30872c25319e43cc530d124539adfee0c2b",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41681/test_vllm_41681.py",
+        "dst": "tests/eval_hidden/test_vllm_41681.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41681.py::test_orjson_float_endpoint_preserves_schema_and_uses_fast_representation[float32]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41681.py::test_base64_response_unchanged_for_orjson",
+      "tests/eval_hidden/test_vllm_41681.py::test_orjson_float_endpoint_preserves_schema_and_uses_fast_representation[bfloat16]",
+      "tests/eval_hidden/test_vllm_41681.py::test_standard_json_float_response_is_unchanged"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41799",
+    "commit_sha": "242afc6bf40d6d088b7b97eda1dd7f00ddcdfa21",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41799/test_vllm_41799.py",
+        "dst": "tests/eval_hidden/test_vllm_41799.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-560]",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-1120]",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-140]",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-560]",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-70]",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-overrides-nested]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-560]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41799.py::test_audio_and_video_accounting_are_independent_of_image_budget",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[default]",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-malformed]",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[nested-none]",
+      "tests/eval_hidden/test_vllm_41799.py::test_encoder_planning_respects_effective_budget[top-280]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[default]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-malformed]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[nested-none]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[top-1120]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[top-140]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[top-280]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[top-560]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[top-70]",
+      "tests/eval_hidden/test_vllm_41799.py::test_image_prompt_uses_effective_budget[top-overrides-nested]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-42244",
+    "commit_sha": "ac062147fae75e482e1fd0b2930746678253d7bb",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-42244/test_vllm_42244.py",
+        "dst": "tests/eval_hidden/test_vllm_42244.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_42244.py::test_language_weights_are_consumed_before_iterator_advances",
+      "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[vision-only-reused-buffer]",
+      "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[with-sound-reused-buffer]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_42244.py::test_sound_weights_require_sound_encoder",
+      "tests/eval_hidden/test_vllm_42244.py::test_text_only_skips_multimodal_weights_including_sound",
+      "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[vision-only-independent]",
+      "tests/eval_hidden/test_vllm_42244.py::test_values_survive_streaming[with-sound-independent]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41932",
+    "commit_sha": "a54f0d1049c3acf18047f21e157d6452b7305957",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41932/test_vllm_41932.py",
+        "dst": "tests/eval_hidden/test_vllm_41932.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41932.py::test_greedy_dispatch_and_copyback[shared-sampler]",
+      "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[draft-probs-shared-sampler]",
+      "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[no-draft-probs-shared-sampler]",
+      "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[greedy]",
+      "tests/eval_hidden/test_vllm_41932.py::test_synthetic_acceptance_is_explicitly_unsupported[random]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41932.py::test_greedy_dispatch_and_copyback[legacy]",
+      "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[draft-probs-legacy]",
+      "tests/eval_hidden/test_vllm_41932.py::test_random_dispatch_and_copyback[no-draft-probs-legacy]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41806",
+    "commit_sha": "f9f770ca0b02f8b83ae92997a68efa797611ce36",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41806/test_vllm_41806.py",
+        "dst": "tests/eval_hidden/test_vllm_41806.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41806.py::test_actor_initialization_resolves_its_own_host[local-default]",
+      "tests/eval_hidden/test_vllm_41806.py::test_driver_host_not_forwarded_in_actor_runtime_environment",
+      "tests/eval_hidden/test_vllm_41806.py::test_host_does_not_affect_compile_factors",
+      "tests/eval_hidden/test_vllm_41806.py::test_worker_environment_excludes_host_but_keeps_ordinary_variables"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41806.py::test_actor_initialization_resolves_its_own_host[explicit-node-override]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-39212",
+    "commit_sha": "e3b65a5ba069b350120ca7a614a010787d2de867",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-39212/test_vllm_39212.py",
+        "dst": "tests/eval_hidden/test_vllm_39212.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[async]",
+      "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[http]",
+      "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[offline]",
+      "tests/eval_hidden/test_vllm_39212.py::test_checkpoint_session_wraps_multiple_chunks_once[worker]",
+      "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[finish_weight_update]",
+      "tests/eval_hidden/test_vllm_39212.py::test_completed_session_is_not_active[update_weights]",
+      "tests/eval_hidden/test_vllm_39212.py::test_double_start_rejected_without_reinitializing",
+      "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[async]",
+      "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[http]",
+      "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[offline]",
+      "tests/eval_hidden/test_vllm_39212.py::test_kernel_session_direct_copy_then_reusable_checkpoint_session[worker]",
+      "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[finish_weight_update]",
+      "tests/eval_hidden/test_vllm_39212.py::test_no_active_session_rejected_before_any_transport_or_reload[update_weights]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_39212.py::test_http_missing_update_metadata_still_returns_bad_request",
+      "tests/eval_hidden/test_vllm_39212.py::test_rlhf_routes_stay_hidden_when_dev_mode_disabled",
+      "tests/eval_hidden/test_vllm_39212.py::test_transport_initialization_is_unchanged",
+      "tests/eval_hidden/test_vllm_39212.py::test_unconfigured_transport_still_errors"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-42081",
+    "commit_sha": "3f9c0c25b3312c6b9e9fa70c4b9849eb53a335ba",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-42081/test_vllm_42081.py",
+        "dst": "tests/eval_hidden/test_vllm_42081.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[bf16_to_fp32]",
+      "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp32_to_bf16]",
+      "tests/eval_hidden/test_vllm_42081.py::test_projector_accepts_vision_dtype[fp64_to_fp32]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_42081.py::test_matching_dtype_keeps_batched_storage[bf16]",
+      "tests/eval_hidden/test_vllm_42081.py::test_matching_dtype_keeps_batched_storage[fp32]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-39243",
+    "commit_sha": "50f2db25554a3a4b9aa4151ec8f6bc0b65bc878d",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-39243/test_vllm_39243.py",
+        "dst": "tests/eval_hidden/test_vllm_39243.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-dotted_nested]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-empty_collections]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-escaping]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-nested_types]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parallel_calls]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-parameterless]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[False-string]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-dotted_nested]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-empty_collections]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-escaping]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-nested_types]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parallel_calls]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-parameterless]",
+      "tests/eval_hidden/test_vllm_39243.py::test_argument_semantics[True-string]",
+      "tests/eval_hidden/test_vllm_39243.py::test_nonstreaming_surrounding_content",
+      "tests/eval_hidden/test_vllm_39243.py::test_pathological_input_finishes_without_crashing",
+      "tests/eval_hidden/test_vllm_39243.py::test_plain_content[False]",
+      "tests/eval_hidden/test_vllm_39243.py::test_plain_content[True]",
+      "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[False]",
+      "tests/eval_hidden/test_vllm_39243.py::test_request_preserves_special_markers[True]",
+      "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-block]",
+      "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-both]",
+      "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-leading]",
+      "tests/eval_hidden/test_vllm_39243.py::test_streaming_arbitrary_chunks[10000-trailing]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_39243.py::test_existing_pythonic_parser_still_parses"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": true,
+    "exclusion_reason": "Fair real-parser tests expose a GT semantic gap: streaming character-by-character and seven-character chunks emit incomplete tool marker prefixes as assistant content, e.g. <|tool_call_start| and <|tool_call_st. The task explicitly requires arbitrary chunking without leaking markup. Retaining those assertions yields a nonzero GT pytest return code, so this task is excluded rather than weakening tests to make GT green."
+  },
+  {
+    "task_id": "vllm-41423",
+    "commit_sha": "ee38750a7565ee7158ddc78ff5abd12e9c0d3733",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41423/test_vllm_41423.py",
+        "dst": "tests/eval_hidden/test_vllm_41423.py"
+      }
+    ],
+    "f2p": [],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41423.py::test_passing_body_returns_normally"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden",
+      "--import-mode=importlib"
+    ],
+    "extra_test_files": [],
+    "excluded": true,
+    "exclusion_reason": "Required GT definition excludes the entire implementation change in tests/utils.py. Both BASE and restricted GT execute the old decorator: two child exception/skip assertions fail and two argument/PID side-effect assertions fail identically. No eligible F2P node exists. Overlaying tests/utils.py would leak the implementation and is deliberately not done."
+  },
+  {
+    "task_id": "vllm-42026",
+    "commit_sha": "f6490a28413526adefae8dd7af32906d060e0436",
+    "overlay": [
+      {
+        "src": "gt:tests/tool_parsers/test_glm4_moe_tool_parser.py",
+        "dst": "tests/tool_parsers/test_glm4_moe_tool_parser.py"
+      },
+      {
+        "src": "gt:tests/tool_parsers/test_glm47_moe_tool_parser.py",
+        "dst": "tests/tool_parsers/test_glm47_moe_tool_parser.py"
+      }
+    ],
+    "f2p": [
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_preserved_in_arg_values",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_whitespace_preserved_in_arg_values"
+    ],
+    "p2p": [
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_args_same_line",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_args_with_newlines",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_content_before",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_empty_content_none",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_multiple",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_no_tool_call",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_whitespace_content_none",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_zero_arg_inline",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47ExtractToolCalls::test_zero_arg_newline",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47Streaming::test_no_args",
+      "tests/tool_parsers/test_glm47_moe_tool_parser.py::TestGlm47Streaming::test_with_args",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_delimiter_preserved_transformers_5x",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[multiple_tool_calls]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[single_tool_call]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_chinese_content]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_content_before]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls[tool_call_with_mixed_args]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_empty_arguments",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_incomplete_tool_call",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_malformed_xml",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_mixed_content",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_no_tools",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_numeric_deserialization",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_special_characters",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_extract_tool_calls_with_thinking_tags",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_malformed_tool_call_no_regex_match",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[1]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[2]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_between_tool_calls[5]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[1]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[2]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[3]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[5]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_content_then_tool_call[8]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_extreme_single_chunk",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[1]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[2]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[3]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[5]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_multiple_tool_calls[8]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[1]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[2]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[3]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[5]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_stream_interval_single_tool_call[8]",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_basic_functionality",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_content_between_tool_calls_multi_token",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_empty_tool_call",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_entire_tool_call_at_once",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_incremental_string_value",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_json_escape_in_string",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_long_content_incremental",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multi_token_chunks",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multi_token_with_multiple_args",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_multiple_tool_calls_sequential",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_no_tool_calls",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_prev_tool_call_arr_updates",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_streaming_with_content_before_tool_calls",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_unicode_characters_preserved",
+      "tests/tool_parsers/test_glm4_moe_tool_parser.py::test_zero_argument_tool_call"
+    ],
+    "pytest_args": [],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41499",
+    "commit_sha": "21943d4c258983c4b8eb56d50029aca4f18e4629",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41499/test_vllm_41499.py",
+        "dst": "tests/eval_hidden/test_vllm_41499.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41499.py::test_cli_options_reach_load_config",
+      "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_block_size]",
+      "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[-1-safetensors_prefetch_num_threads]",
+      "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_block_size]",
+      "tests/eval_hidden/test_vllm_41499.py::test_config_rejects_nonpositive[0-safetensors_prefetch_num_threads]",
+      "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[1-1024]",
+      "tests/eval_hidden/test_vllm_41499.py::test_loader_honors_prefetch_settings[2-4096]",
+      "tests/eval_hidden/test_vllm_41499.py::test_public_defaults"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41499.py::test_cli_without_new_flags_still_constructs",
+      "tests/eval_hidden/test_vllm_41499.py::test_default_loader_io_unchanged"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41965",
+    "commit_sha": "c1819ca283021b65ac1ea71901d99f26b1103efe",
+    "overlay": [
+      {
+        "src": "gt:tests/quantization/test_compressed_tensors.py",
+        "dst": "tests/quantization/test_compressed_tensors.py"
+      }
+    ],
+    "f2p": [
+      "tests/quantization/test_compressed_tensors.py::test_find_matched_target_returns_none_on_no_match",
+      "tests/quantization/test_compressed_tensors.py::test_get_scheme_dict_returns_none_on_no_match"
+    ],
+    "p2p": [
+      "tests/quantization/test_compressed_tensors.py::test_get_quant_method_returns_linear_method_for_parallel_lm_head",
+      "tests/quantization/test_compressed_tensors.py::test_get_quant_method_returns_none_for_ignored_parallel_lm_head",
+      "tests/quantization/test_compressed_tensors.py::test_get_quant_method_returns_none_for_unmatched_parallel_lm_head"
+    ],
+    "pytest_args": [
+      "-k",
+      "find_matched_target_returns_none or get_scheme_dict_returns_none or lm_head"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41916",
+    "commit_sha": "06a60d3dd08b689f381ffd6384b8123371b2f250",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41916/test_vllm_41916.py",
+        "dst": "tests/eval_hidden/test_vllm_41916.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41916.py::test_labels_do_not_change_counter_identity",
+      "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[created]",
+      "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[gauge]",
+      "tests/eval_hidden/test_vllm_41916.py::test_only_counter_totals_contribute[sum]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41916.py::test_endpoint_without_speculative_metrics",
+      "tests/eval_hidden/test_vllm_41916.py::test_totals_only_and_multiengine_aggregation"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-42188",
+    "commit_sha": "b1687527b83649771a543baef1f33aa07b219855",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-42188/test_vllm_42188.py",
+        "dst": "tests/eval_hidden/test_vllm_42188.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_42188.py::test_legacy_unresolvable_name[null_name]",
+      "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[missing_id]",
+      "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[null_id_and_name]",
+      "tests/eval_hidden/test_vllm_42188.py::test_unresolvable_openai_tool_name[unmatched_id]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_42188.py::test_legacy_unresolvable_name[missing_name]",
+      "tests/eval_hidden/test_vllm_42188.py::test_matching_tool_id_retains_function_name",
+      "tests/eval_hidden/test_vllm_42188.py::test_named_legacy_response_retains_name_and_content",
+      "tests/eval_hidden/test_vllm_42188.py::test_plain_conversation_still_renders"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-40891",
+    "commit_sha": "10ebb40d62e024116c1a4473f8e357a3e72761ed",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-40891/test_vllm_40891.py",
+        "dst": "tests/eval_hidden/test_vllm_40891.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-async_scheduler]",
+      "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[list-sync_scheduler]",
+      "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-async_scheduler]",
+      "tests/eval_hidden/test_vllm_40891.py::test_async_output_is_lazy_cached_and_on_result_callers_thread[single-sync_scheduler]",
+      "tests/eval_hidden/test_vllm_40891.py::test_initialization_creates_no_output_thread_pool[async_scheduler]",
+      "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[async_scheduler]",
+      "tests/eval_hidden/test_vllm_40891.py::test_output_exception_is_lazy_and_cached[sync_scheduler]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_40891.py::test_initialization_creates_no_output_thread_pool[sync_scheduler]",
+      "tests/eval_hidden/test_vllm_40891.py::test_nonasync_output_shape_is_unchanged[list-blocking]",
+      "tests/eval_hidden/test_vllm_40891.py::test_nonasync_output_shape_is_unchanged[list-nonblocking]",
+      "tests/eval_hidden/test_vllm_40891.py::test_nonasync_output_shape_is_unchanged[single-blocking]",
+      "tests/eval_hidden/test_vllm_40891.py::test_nonasync_output_shape_is_unchanged[single-nonblocking]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-40708",
+    "commit_sha": "25abddc1a5cb5dbe51d629aada9360579acb8acf",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-40708/test_vllm_40708.py",
+        "dst": "tests/eval_hidden/test_vllm_40708.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-down_proj-w2-w2-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-gate_proj-w13-w1-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[packed-up_proj-w13-w3-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-down_proj-w2-w2-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-gate_proj-w13-w1-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scale-up_proj-w13-w3-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-down_proj-w2-w2-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-gate_proj-w13-w1-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[zero_point-up_proj-w13-w3-1]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[bare-down_proj-w2-w2-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[bare-down_proj-w2-w2-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[bare-gate_proj-w13-w1-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[bare-gate_proj-w13-w1-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[bare-up_proj-w13-w3-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[bare-up_proj-w13-w3-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qweight-down_proj-w2-w2-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qweight-down_proj-w2-w2-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qweight-gate_proj-w13-w1-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qweight-gate_proj-w13-w1-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qweight-up_proj-w13-w3-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qweight-up_proj-w13-w3-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qzeros-down_proj-w2-w2-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qzeros-down_proj-w2-w2-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qzeros-gate_proj-w13-w1-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qzeros-gate_proj-w13-w1-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qzeros-up_proj-w13-w3-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[qzeros-up_proj-w13-w3-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scales-down_proj-w2-w2-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scales-down_proj-w2-w2-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scales-gate_proj-w13-w1-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scales-gate_proj-w13-w1-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scales-up_proj-w13-w3-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[scales-up_proj-w13-w3-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[weight-down_proj-w2-w2-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[weight-down_proj-w2-w2-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[weight-gate_proj-w13-w1-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[weight-gate_proj-w13-w1-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[weight-up_proj-w13-w3-0]",
+      "tests/eval_hidden/test_vllm_40708.py::test_checkpoint_expert_routes_to_parameter_and_shard[weight-up_proj-w13-w3-1]",
+      "tests/eval_hidden/test_vllm_40708.py::test_nonexpert_unquantized_parameter_still_loads"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41237",
+    "commit_sha": "60851b1d22749de50da36287301fe994118941c2",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41237/test_vllm_41237.py",
+        "dst": "tests/eval_hidden/test_vllm_41237.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-MooncakeConnectorV1]",
+      "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-NixlConnector]",
+      "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[expandable_segments:True-SomeOOTConnector]",
+      "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-MooncakeConnectorV1]",
+      "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-NixlConnector]",
+      "tests/eval_hidden/test_vllm_41237.py::test_rejects_unsafe_connector_during_construction[max_split_size_mb:512,expandable_segments:True-SomeOOTConnector]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41237.py::test_no_connector_allows_expandable_segments",
+      "tests/eval_hidden/test_vllm_41237.py::test_sleep_mode_allows_connector",
+      "tests/eval_hidden/test_vllm_41237.py::test_unrelated_allocator_options_allowed[None]",
+      "tests/eval_hidden/test_vllm_41237.py::test_unrelated_allocator_options_allowed[max_split_size_mb:512,expandable_segments:False]",
+      "tests/eval_hidden/test_vllm_41237.py::test_unrelated_allocator_options_allowed[max_split_size_mb:512]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  },
+  {
+    "task_id": "vllm-41905",
+    "commit_sha": "2ee8c2a56e41fbd00b4fb52f29464fb7fca48dba",
+    "overlay": [
+      {
+        "src": "synthetic:dataset/synthetic_tests/vllm-41905/test_vllm_41905.py",
+        "dst": "tests/eval_hidden/test_vllm_41905.py"
+      }
+    ],
+    "f2p": [
+      "tests/eval_hidden/test_vllm_41905.py::test_constructed_multitoken_model_can_chain_predictions",
+      "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[2]",
+      "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[3]",
+      "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[8]",
+      "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-1]",
+      "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-2]",
+      "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-5]",
+      "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-1]",
+      "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-2]",
+      "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-5]",
+      "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[1]",
+      "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[2]",
+      "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[5]"
+    ],
+    "p2p": [
+      "tests/eval_hidden/test_vllm_41905.py::test_construction_accepts_positive_speculative_token_counts[1]",
+      "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[input_ids-0]",
+      "tests/eval_hidden/test_vllm_41905.py::test_hidden_state_path_reuses_available_layer[inputs_embeds-0]",
+      "tests/eval_hidden/test_vllm_41905.py::test_logits_path_accepts_later_speculative_steps[0]"
+    ],
+    "pytest_args": [
+      "--confcutdir=tests/eval_hidden"
+    ],
+    "extra_test_files": [],
+    "excluded": false
+  }
+]
