@@ -1,0 +1,1 @@
+Upstream vllm-project/vllm main @ ce775739e9 (2026-10-28). Read-only fetch.

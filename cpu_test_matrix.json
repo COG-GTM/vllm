@@ -1,0 +1,119 @@
+[
+  {
+    "path": "tests/v1/core",
+    "passed": 291,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 2,
+    "seconds": 423.95,
+    "notes": "exit=1; log=test_00.log; 291 passed, 15 warnings, 2 errors in 409.94s (0:06:49); CUDA mentioned; inspect log; Two scheduler E2E setup errors: CPU memory utilization 0.92 requests 28.84 GiB but only 22.63 GiB available; CPU compilation verification ran concurrently. Other 291 tests passed; public HF model download occurred."
+  },
+  {
+    "path": "tests/tokenizers_",
+    "passed": 374,
+    "failed": 0,
+    "skipped": 120,
+    "errors": 70,
+    "seconds": 600.23,
+    "notes": "exit=124; log=test_01.log; 600s wall cap; counts incomplete; Moved from tests/tokenization to tests/tokenizers_. 600s wall cap; only observed progress counts, not a complete pytest summary. HF tokenizer downloads and gated models involved; last visible progress at 55%."
+  },
+  {
+    "path": "tests/entrypoints/test_chat_utils.py tests/entrypoints/test_context.py tests/entrypoints/test_utils.py",
+    "passed": 95,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "seconds": 138.18,
+    "notes": "exit=0; log=test_02.log; 95 passed, 14 warnings in 130.58s (0:02:10); Non-server unit subset: chat_utils, context, utils. All passed; do not infer all entrypoints are CPU-safe."
+  },
+  {
+    "path": "tests/tool_parsers",
+    "passed": 676,
+    "failed": 14,
+    "skipped": 0,
+    "errors": 41,
+    "seconds": 353.68,
+    "notes": "exit=1; log=test_03.log; 14 failed, 676 passed, 41 xfailed, 3 warnings, 41 errors in 345.80s (0:05:45); Hugging Face network/download involved; 14 Mistral failures: GrammarFactory.get_lark_from_jinja missing force_tool_names (installed mistral_common API). 41 setup errors: HF API 429 Too Many Requests for Qwen/Qwen3-32B, then vocabulary load errors. 41 xfailed additional to requested count columns."
+  },
+  {
+    "path": "tests/reasoning",
+    "passed": 434,
+    "failed": 11,
+    "skipped": 0,
+    "errors": 0,
+    "seconds": 248.26,
+    "notes": "exit=1; log=test_04.log; 11 failed, 434 passed, 3 warnings in 240.27s (0:04:00); 11 GLM4/SeedOSS reasoning-content assertion mismatches. Tokenizer-dependent semantics; precise dependency-vs-source cause not established. HF downloads required."
+  },
+  {
+    "path": "tests/config",
+    "passed": 51,
+    "failed": 3,
+    "skipped": 0,
+    "errors": 0,
+    "seconds": 286.62,
+    "notes": "exit=1; log=test_05.log; 3 failed, 51 passed, 16 warnings in 278.98s (0:04:38); Hugging Face network/download involved; 3 failures: gated Meta Llama config downloads return HTTP 401. HF authentication/access required."
+  },
+  {
+    "path": "tests/test_config.py",
+    "passed": 124,
+    "failed": 5,
+    "skipped": 1,
+    "errors": 0,
+    "seconds": 253.11,
+    "notes": "exit=1; log=test_06.log; 5 failed, 124 passed, 1 skipped, 14 warnings in 244.25s (0:04:04); Hugging Face network/download involved; 5 failures: CPU forces async_scheduling=False contrary to a test expectation, IR op priority expects vllm_c but CPU has native only, plus three gated Llama HF config HTTP 401 failures. One skipped."
+  },
+  {
+    "path": "tests/v1/structured_output",
+    "passed": 20,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "seconds": 25.88,
+    "notes": "exit=0; log=test_07.log; 20 passed, 14 warnings in 17.95s; All passed; guidance and reasoning structured-output unit tests, not model inference."
+  },
+  {
+    "path": "tests/multimodal",
+    "passed": 323,
+    "failed": 12,
+    "skipped": 0,
+    "errors": 0,
+    "seconds": 294.46,
+    "notes": "exit=1; log=test_08.log; 12 failed, 323 passed, 1 xfailed, 18 warnings, 9 rerun in 287.49s (0:04:47); 12 failures: external bogotobogo.com MP4 returns HTTP 403. One xfailed; 9 reruns by existing pytest-rerunfailures markers. Other media/image/audio tests passed."
+  },
+  {
+    "path": "tests/utils_",
+    "passed": 164,
+    "failed": 3,
+    "skipped": 1,
+    "errors": 0,
+    "seconds": 44.07,
+    "notes": "exit=1; log=test_09.log; 3 failed, 164 passed, 1 skipped, 32 warnings in 36.73s; CUDA mentioned; inspect log; Initial run stopped at collection: missing vllm_test_utils. Installed local tests/vllm_test_utils (0.61s) and reran. Final 3 failures are CUDA memory-profiling tests (libcudart not loaded / no accelerator)."
+  },
+  {
+    "path": "tests/v1/kv_connector/unit",
+    "passed": 320,
+    "failed": 19,
+    "skipped": 20,
+    "errors": 0,
+    "seconds": 443.04,
+    "notes": "exit=1; log=test_10.log; 19 failed, 320 passed, 20 skipped, 15 warnings in 433.72s (0:07:13); CUDA mentioned; inspect log; Hugging Face network/download involved; 19 failures include CUDA-only HF3FS/Mooncake paths, no accelerator, gated Llama HTTP 401, Ray requiring GPU, and NIXL unavailable. 20 explicitly skipped; many mocked/offloading connector units passed."
+  },
+  {
+    "path": "tests/lora/test_lora_utils.py tests/lora/test_peft_helper.py tests/lora/test_resolver.py tests/lora/test_utils.py",
+    "passed": 31,
+    "failed": 0,
+    "skipped": 0,
+    "errors": 0,
+    "seconds": 22.32,
+    "notes": "exit=0; log=test_11.log; 31 passed, 14 warnings in 14.10s; Non-kernel unit subset: lora_utils, peft_helper, resolver, utils. All 31 passed; not all LoRA tests."
+  },
+  {
+    "path": "tests/transformers_utils",
+    "passed": 35,
+    "failed": 1,
+    "skipped": 0,
+    "errors": 0,
+    "seconds": 14.75,
+    "notes": "exit=1; log=test_12.log; 1 failed, 35 passed in 7.82s; Hugging Face network/download involved; One failure: gated meta-llama/Llama-3.2-1B-Instruct config HTTP 401; remaining 35 passed."
+  }
+]
