@@ -10,9 +10,11 @@ From a fresh base source checkout, run the absolute path to
 `harness/setup_cpu_env.sh` in this separate harness checkout. It creates `.venv`,
 installs the pinned CPU environment, installs vLLM editable, and builds two real
 CPU kernels from unchanged base C++ source. Requires Linux x86_64 with AVX2,
-a C++17 compiler/OpenMP, and uv. Initial setup needs package/wheel downloads;
-test execution does not. Timings are warm-cache observations, not cold-install
-estimates. No GPU, model weights, or Hugging Face downloads are required.
+a C++17 compiler/OpenMP, and uv. Initial setup needs package/wheel downloads
+and prefetches the pinned Hugging Face metadata/tokenizer files in
+`hf_assets.json`; test execution does not need network access. Timings are
+warm-cache observations, not cold-install estimates. No GPU or model weights
+are required.
 
 ## Run
 

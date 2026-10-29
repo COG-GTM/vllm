@@ -1,0 +1,39 @@
+[
+  {
+    "repo_id": "deepseek-ai/DeepSeek-V3.2",
+    "repo_type": "model",
+    "revision": "a7e62ac04ecb2c0a54d736dc46601c5606cf10a6",
+    "files": [
+      "config.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ]
+  },
+  {
+    "repo_id": "facebook/opt-125m",
+    "repo_type": "model",
+    "revision": "27dcfa74d334bc871f3234de431e71c6eeba5dd6",
+    "files": [
+      "config.json"
+    ]
+  },
+  {
+    "repo_id": "Qwen/Qwen3-0.6B",
+    "repo_type": "model",
+    "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+    "files": [
+      "config.json"
+    ]
+  },
+  {
+    "repo_id": "zai-org/GLM-4.5",
+    "repo_type": "model",
+    "revision": "cbb2c7cfb52fa128a9660cb1a7a78e017899e115",
+    "files": [
+      "chat_template.jinja",
+      "config.json",
+      "tokenizer.json",
+      "tokenizer_config.json"
+    ]
+  }
+]

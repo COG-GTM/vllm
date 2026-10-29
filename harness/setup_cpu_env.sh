@@ -25,7 +25,10 @@ VLLM_TARGET_DEVICE=cpu VLLM_USE_PRECOMPILED=1 \
     uv pip install --python .venv/bin/python -e . --torch-backend=auto --no-deps
 PATH="$PWD/.venv/bin:$PATH" .venv/bin/python "$HARNESS_DIR/build_cpu_kernels.py"
 
-# Test runs set these too; setup may download packages/wheels, tests may not.
+# Setup may download packages/wheels and pinned HF assets; tests may not.
+# Measured prefetch on this VM: 1.75s for 27.83 MB.
+.venv/bin/python "$HARNESS_DIR/prefetch_hf.py"
+
 VLLM_TARGET_DEVICE=cpu HF_HUB_OFFLINE=1 .venv/bin/python - <<'PY'
 import torch
 import vllm
